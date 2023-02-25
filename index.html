@@ -8,38 +8,45 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-secondary-subtle">
     <div class="container">
-        <h1>Jobcenter Koeln Logo</h1>
-      </div>
-    
+        <h1 class="align-baseline">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
+    </div>
+
     <div class="container">
-        <div class="row fs-4 bg-success-subtle">
+        <div class="row alert alert-warning" role="alert">
+            Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für jede ausländische Person in der BG separat durchzuführen, soweit deren Aufenthaltsstatus nach FreizügG/EU unterschiedlich zu der hier geprüften Person ist.
+        </div>
+    </div>
+
+
+    <div class="container fs-6">
+        <div class="row fs-4">
             Organisatorisches
         </div>
         <div class="row">
             <div class="col-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">BG</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <label for="BG" class="form-label my-0">BG</label>
+                    <input type="text" class="form-control" id="BG">
                 </div>            
             </div>
             <div class="col">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Sachbearbeiter</label>
-                    <input type="text" class="form-control">
+                    <label for="Sachbearbeiter" class="form-label my-0">Sachbearbeiter</label>
+                    <input type="text" class="form-control" id="Sachbearbeiter">
                 </div>  
             </div>
             <div class="col-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Team</label>
-                    <input type="text" class="form-control">
+                    <label for="Team" class="form-label my-0">Team</label>
+                    <input type="text" class="form-control" id="Team">
                 </div>  
             </div>
             <div class="col-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Datum</label>
-                    <input type="text" class="form-control">
+                    <label for="Datum" class="form-label my-0">Datum</label>
+                    <input type="text" class="form-control" id="Datum">
                 </div>  
               </div>
           </div>
@@ -47,40 +54,102 @@
 
     </div>
 
-    <div class="container">
-        <div class="row fs-4 bg-success-subtle">
+    <div class="container fs-6">
+        <div class="row fs-4">
             Kunde
         </div>
 
         <div class="row">
             <div class="col-4">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Name</label>
-                    <input type="text" class="form-control" >
+                    <label for="Name" class="form-label my-0">Name</label>
+                    <input type="text" class="form-control" id="Name">
                 </div>  
             </div>
             <div class="col-4">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Vorname</label>
-                    <input type="text" class="form-control">
+                    <label for="Vorname" class="form-label my-0">Vorname</label>
+                    <input type="text" class="form-control" id="Vorname">
                 </div> 
             </div>
             <div class="col-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Geburtstag</label>
-                    <input type="text" class="form-control">
+                    <label for="Geburtstag" class="form-label my-0">Geburtstag</label>
+                    <input type="text" class="form-control" id="Geburtstag">
                 </div>   
             </div>
             <div class="col-2">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label my-0">Kd-Nr.</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <label for="Kd-Nr." class="form-label my-0">Kd-Nr.</label>
+                    <input type="text" class="form-control" id="Kd-Nr.">
                 </div>
             </div>       
-        </div>     
-    </div>         
+        </div>  
+        
+        <div class="row">
+            <div class="col-4">
+                <div class="mb-3">
+                    <label for="Staatsangehörigkeit" class="form-label my-0">Staatsangehörigkeit</label>
+                    <input type="text" class="form-control" id="Staatsangehörigkeit">
+                </div> 
+            </div>
+            <div class="col-4">
+                <label for="title" class="form-label my-0">Aufenthaltstitel/-status nach AufenthG/FreizügG/EU</label>
+                <select class="form-select" id="title">
+                    <option selected>Auswahl öffnen</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="form-check my-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
+                <label class="form-check-label" for="Drittstaatler">
+                    <b>Drittstaatler</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                </label>
+         </div>
+         <div class="form-check my-2">
+            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Staatenloser">
+            <label class="form-check-label" for="Staatenloser">
+                <b>Staatenloser</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
+            </label>
+        </div>
+        <div class="form-check my-2">
+            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Unionsbürger">
+            <label class="form-check-label" for="Unionsbürger">
+                <b>Unionsbürger</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+            </label>
+        </div>
+        <div class="form-check my-2">
+            <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler">
+            <label class="form-check-label" for="EWR-Staatler">
+                <b>EWR-Staatler</b> <span class="fst-italic">(Island/Liechtenstein/Norwegen) mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+            </label>
+        </div>
+        <div class="form-check my-2">
+            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer">
+            <label class="form-check-label" for="Schweizer">
+                <b>Schweizer</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="container fs-6">
+        <div class="row fs-4">
+            
+        </div>
+    </div>
+
+
+
+    
+
+    
 
 
     <script src="js/bootstrap.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
