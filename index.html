@@ -8,84 +8,63 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-secondary-subtle">
+
+<body class="container bg-secondary-subtle" style="width: 210mm">
+<!--Organistatorische Daten-->
     <div class="container">
-        <h1 class="align-baseline">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
-    </div>
-
-    <div class="container">
-        <div class="row alert alert-warning" role="alert">
-            Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für jede ausländische Person in der BG separat durchzuführen, soweit deren Aufenthaltsstatus nach FreizügG/EU unterschiedlich zu der hier geprüften Person ist.
-        </div>
-    </div>
-
-
-    <div class="container fs-6">
-        <div class="row fs-4">
-            Organisatorisches
-        </div>
         <div class="row">
-            <div class="col-2">
-                <div class="mb-3">
-                    <label for="BG" class="form-label my-0">BG</label>
-                    <input type="text" class="form-control" id="BG">
+            <div class="col-3">
+                <div>
+                    <input type="text" class="form-control" id="BG" placeholder="35702//">
                 </div>            
             </div>
-            <div class="col">
-                <div class="mb-3">
-                    <label for="Sachbearbeiter" class="form-label my-0">Sachbearbeiter</label>
-                    <input type="text" class="form-control" id="Sachbearbeiter">
+            <div class="col-5">
+                <div>
+                    <input type="text" class="form-control" id="Sachbearbeiter" placeholder="Sachbearbeiter">
                 </div>  
             </div>
             <div class="col-2">
-                <div class="mb-3">
-                    <label for="Team" class="form-label my-0">Team</label>
-                    <input type="text" class="form-control" id="Team">
+                <div >
+                    <input type="text" class="form-control" id="Team" placeholder="Team">
                 </div>  
             </div>
-            <div class="col-2">
-                <div class="mb-3">
-                    <label for="Datum" class="form-label my-0">Datum</label>
-                    <input type="text" class="form-control" id="Datum">
-                </div>  
-              </div>
-          </div>
-        
-
+            <div class="col-2 pt-2" id="Datum">
+                <!--datum wir mit js eingefuegt  -->
+            </div>
+        </div>
+    </div>
+    <div class="container my-0">
+        <h1 class="align-baseline fs-3">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
+    </div>
+<!--Einleitungswort  -->
+    <div class="container mb-3 fs-6">
+        <div class="row alert alert-warning p-0 m-0" role="alert">
+            Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für jede ausländische Person in der BG separat durchzuführen, soweit deren Aufenthaltsstatus nach FreizügG/EU unterschiedlich zu der hier geprüften Person ist.  
+        </div>  
+        <p class="fst-italic m-0 text-muted" id="VerweisFachlWeisungen">
+            Ergänzende/vertiefende Informationen zur Prüfung von SGB II-Leistungsansprüchen bzw. von SGB II-Ausschlusstatbeständen bei Ausländern stehen in den Fachlichen Weisungen, in der Wissensdatenbank der BA zu den §§ 7, 8 SGB II, dem BA-Intranet sowie im Jobcenter-Intranet in der Datenbank Recht (Suchbegriff „Ausländer“) und über den "Schnellfinder" auf der FU-Seite zur Verfügung.
+        </p>          
     </div>
 
-    <div class="container fs-6">
-        <div class="row fs-4">
-            Kunde
-        </div>
-
-        <div class="row">
-            <div class="col-4">
-                <div class="mb-3">
-                    <label for="Name" class="form-label my-0">Name</label>
-                    <input type="text" class="form-control" id="Name">
+<!--Kundendaten  -->
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-6 pe-0">
+                <div class="mb-6">
+                    <input type="text" class="form-control" id="Name" placeholder="Name, Vorname">
                 </div>  
-            </div>
-            <div class="col-4">
-                <div class="mb-3">
-                    <label for="Vorname" class="form-label my-0">Vorname</label>
-                    <input type="text" class="form-control" id="Vorname">
-                </div> 
-            </div>
-            <div class="col-2">
-                <div class="mb-3">
-                    <label for="Geburtstag" class="form-label my-0">Geburtstag</label>
-                    <input type="text" class="form-control" id="Geburtstag">
+            </div> 
+            <div class="col-3">
+                <div>
+                    <input type="text" class="form-control" id="Kd-Nr." placeholder="Kd-Nr.">
+                </div>
+            </div>   
+            <div class="col-3">
+                <div>
+                    <input type="text" class="form-control" id="Geburtstag" placeholder="Geburtstag">
                 </div>   
             </div>
-            <div class="col-2">
-                <div class="mb-3">
-                    <label for="Kd-Nr." class="form-label my-0">Kd-Nr.</label>
-                    <input type="text" class="form-control" id="Kd-Nr.">
-                </div>
-            </div>       
-        </div>  
-        
+        </div>
         <div class="row">
             <div class="col-4">
                 <div class="mb-3">
@@ -93,7 +72,7 @@
                     <input type="text" class="form-control" id="Staatsangehörigkeit">
                 </div> 
             </div>
-            <div class="col-4">
+            <div class="col-7">
                 <label for="title" class="form-label my-0">Aufenthaltstitel/-status nach AufenthG/FreizügG/EU</label>
                 <select class="form-select" id="title">
                     <option selected>Auswahl öffnen</option>
@@ -103,52 +82,40 @@
                   </select>
             </div>
         </div>
-        <div class="row my-4">
-            <div class="form-check my-2">
+        <div class="row my-0">
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
                 <label class="form-check-label" for="Drittstaatler">
                     <b>Drittstaatler</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
                 </label>
-         </div>
-         <div class="form-check my-2">
-            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Staatenloser">
-            <label class="form-check-label" for="Staatenloser">
-                <b>Staatenloser</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
-            </label>
-        </div>
-        <div class="form-check my-2">
-            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Unionsbürger">
-            <label class="form-check-label" for="Unionsbürger">
-                <b>Unionsbürger</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
-            </label>
-        </div>
-        <div class="form-check my-2">
-            <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler">
-            <label class="form-check-label" for="EWR-Staatler">
-                <b>EWR-Staatler</b> <span class="fst-italic">(Island/Liechtenstein/Norwegen) mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
-            </label>
-        </div>
-        <div class="form-check my-2">
-            <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer">
-            <label class="form-check-label" for="Schweizer">
-                <b>Schweizer</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
-            </label>
-        </div>
-    </div>
-
-    <div class="container fs-6">
-        <div class="row fs-4">
-            
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Staatenloser">
+                <label class="form-check-label" for="Staatenloser">
+                    <b>Staatenloser</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Unionsbürger">
+                <label class="form-check-label" for="Unionsbürger">
+                    <b>Unionsbürger</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler">
+                <label class="form-check-label" for="EWR-Staatler">
+                    <b>EWR-Staatler</b> <span class="fst-italic">(Island/Liechtenstein/Norwegen) mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer">
+                <label class="form-check-label" for="Schweizer">
+                    <b>Schweizer</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                </label>
+            </div>
         </div>
     </div>
-
-
-
-    
-
-    
-
-
+`
     <script src="js/bootstrap.js"></script>
     <script src="app.js"></script>
 </body>
