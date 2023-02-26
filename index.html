@@ -82,7 +82,7 @@
                   </select>
             </div>
         </div>
-        <div class="row my-0">
+
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
                 <label class="form-check-label" for="Drittstaatler">
@@ -113,9 +113,226 @@
                     <b>Schweizer</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
                 </label>
             </div>
+            <div class="fst-italic orangeColor mb-3">
+                (bzgl.. gewöhnlichen Aufenthalts im Bundesgebiet, vgl. § 7 Abs. 1 S. 1 Nr. 4 SGB II u. FW BA zu § 7 SGB II, Rzn. 7.2, 7.3, 7.6, 7.27, 7.40, Anlage 4)
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="§81Abs.4AufenthG">
+                <label class="form-check-label" for="§81Abs.4AufenthG">
+                    Es liegt eine <b>Fiktionsbescheinigung (FB) nach § 81 Abs. 4 AufenthG vor</b>
+                </label>
+            </div>
+            <div class="form-check ms-4">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Es wird bestätigt, dass der der FB zugrunde liegende Titel ebenfalls vorliegt (Nur bei Vorliegen des zugehörigen Titels ist eine weitere Bearbeitung möglich!)
+                    <span class="orangeColor fst-italic">(vgl. FW BA zu § 7 SGB II, Rz. 7.41 (3))</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="Wohnsitzauflage">
+                <label class="form-check-label" for="Wohnsitzauflage">
+                    Es liegt keine Wohnsitzauflage nach § 12a AufenthG vor, die zur Unzuständigkeit des JC Köln führt
+                    <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
+                </label>
+            </div>
+    </div>
+
+<!--Pruefung kein Ausschluss -->
+    <div class="container mt-4">
+        <h2 class="fs-4">Prüfung kein Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1-3, § 8 Abs. 2 SGB II</h2>
+        <div>
+            Aufenthaltstitel/-status nach AufenthG (ggf. nach § 81 Abs. 4 fiktioniert), die <b>NICHT</b> zum Ausschluss führen.
+            <p class="my-0"><u>Voraussetzung:</u> Erwerbstätigkeit erlaubt/könnte erlaubt werden.</p>
+            <p class= "orangeColor fst-italic">(ggf. Bewilligungsdauer beachten wg. Gültigkeitsdauer Titel/Status, vgl. Fachliche Weisungen für die Bearbeitung von Anträgen nach dem SGB II (Loseblattsammlung), Ziff. 5 „Bewilligungsdauer“, u. FW BA zu § 41 SGB II, Rzn. 41.11, 41.12, 41.13; vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.10, 7.21, 7.41, 7.48a, Anlage 4)</p>
+        </div>
+        <div class="row">
+            <div class="col border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="1">
+                    <label class="form-check-label" for="1">
+                        § 22 S. 1
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="2">
+                    <label class="form-check-label" for="2">
+                        § 22 S. 2
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="3">
+                    <label class="form-check-label" for="3">
+                        § 23 Abs. 3
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="4">
+                    <label class="form-check-label" for="4">
+                        § 23 Abs. 4
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="5">
+                    <label class="form-check-label" for="5">
+                        § 23a Abs. 1
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="6">
+                    <label class="form-check-label" for="6">
+                        § 23a Abs. 2
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="7">
+                    <label class="form-check-label" for="7">
+                        § 24 <span class="fst-italic orangeColor">(ohne Zusatz „wegen Krieges im Heimatland“; vgl. FW BA zu § 7 SGB II, Rz. 7.21 (2)/(4), sowie FA BA zu § 74 SGB II)</span>
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="8">
+                    <label class="form-check-label" for="8">
+                        § 25 Abs. 1
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="9">
+                    <label class="form-check-label" for="9">
+                        § 25 Abs. 2
+                    </label>
+                 </div>
+            </div>
+            <div class="col border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="10">
+                    <label class="form-check-label" for="10">
+                        § 25 Abs. 3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="11">
+                    <label class="form-check-label" for="11">
+                        § 25 Abs. 4 S. 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="12">
+                    <label class="form-check-label" for="12">
+                        § 25 Abs. 4a
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="13">
+                    <label class="form-check-label" for="13">
+                        § 25 Abs. 4b
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="14">
+                    <label class="form-check-label" for="14">
+                        §  25 Abs. 5 <span class="fst-italic orangeColor">(und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt bereits mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor mindestens 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt mindestens 18 Monate; vgl. FW  BA zu § 7 SGB II, Rzn. 7.54 (2), 7.55, 7.57, Anlage 4)</span>
+                    </label>
+                  </div>
+            </div>
+            <div class="col border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="15">
+                    <label class="form-check-label" for="15">
+                        § 25a Abs. 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="16">
+                    <label class="form-check-label" for="16">
+                        § 25a Abs. 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="17">
+                    <label class="form-check-label" for="17">
+                        § 25a Abs. 3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="18">
+                    <label class="form-check-label" for="18">
+                        § 25a Abs. 4
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="19">
+                    <label class="form-check-label" for="19">
+                        § 25b Abs. 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="20">
+                    <label class="form-check-label" for="20">
+                       § 25b Abs. 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="21">
+                    <label class="form-check-label" for="21">
+                       § 25b Abs. 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="22">
+                    <label class="form-check-label" for="22">
+                       § 25b Abs. 3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="23">
+                    <label class="form-check-label" for="23">
+                       § 25b Abs. 4
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="24">
+                    <label class="form-check-label" for="24">
+                       § 25b Abs. 5
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="25">
+                    <label class="form-check-label" for="25">
+                      § 26 Abs. 1
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="26">
+                    <label class="form-check-label" for="26">
+                      § 26 Abs. 2
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
+                    <label class="form-check-label" for="27">
+                      § 26 Abs. 3
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
+                    <label class="form-check-label" for="27">
+                      § 26 Abs. 4
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="28">
+                    <label class="form-check-label" for="28">
+                        § 104c <span class="fs-italic orangeColor">(ggf. Bewilligungsdauer auf letzten Gültigkeitstag begrenzen; vgl. FW BA zu § 7 SGB II, Rzn. 7.61, 7.62, Anlage 4 sowie „Information: Chancen-Aufenthaltsrecht nach § 104c AufenthG – Chancen-Aufenthaltsrecht nach § 104c AufenthG – Zugang zu SGB II-Leistungen, Integrationsaspekten“ in DB Recht)</span>
+                    </label>
+                  </div>
+
+            </div>
         </div>
     </div>
-`
+
+
     <script src="js/bootstrap.js"></script>
     <script src="app.js"></script>
 </body>

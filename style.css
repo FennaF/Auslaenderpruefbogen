@@ -1,4 +1,7 @@
-#VerweisFachlWeisungen {
-
+.orangeColor {
+  color: rgb(227, 108, 10);
 }
-  
+
+#titelSelectAusschlusspruefung{
+  height: fit-content;
+}
