@@ -11,32 +11,86 @@
 
 <body class="container bg-secondary-subtle" style="width: 210mm">
 <!--Organistatorische Daten-->
+    <div class="container pt-3 mb-2">
+        <form action="">
+            <div class="row">
+                <label class="col-auto fw-bold" for="Standort">Jobcenter Köln, Geschäftsbereich</label>
+                <div class="col-auto ps-0">
+                    <select class="form-select bootstrap-select fw-bold print-only" aria-label="Default select example" id="Standort">
+                        <option selected>Standortauswahl</option>
+                        <option value="1">Kalk</option>
+                        <option value="2">Mitte</option>
+                        <option value="3">Mülheim</option>
+                        <option value="3">Nord-Chorweiler</option>
+                        <option value="3">Nord-Nippes</option>
+                        <option value="3">Porz</option>
+                        <option value="3">Süd</option>
+                        <option value="3">U25</option>
+                    </select>
+                </div>
+                <div class="col-2" id="Datum">
+                    <!--datum wir mit js eingefuegt  -->
+                </div>
+            </div>
+            <div class="row mt-0">
+                <label for="Team" class="col-auto pe-0">Team</label>
+                <div class="col-2 ps-1">
+                  <input type="text" class="form-control bootstrap-select print-only" id="Team" placeholder="">
+                </div>
+                <label for="BGNr" class="col-auto pe-0">BG-Nr.: 35702//</label>
+                <div class="col-2 p-0">
+                  <input type="text" class="form-control bootstrap-select print-only" id="BGNr" placeholder="">
+                </div>
+            </div>
+        </form>
+    </div>
+<!--Kundendaten-->
     <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <div>
-                    <input type="text" class="form-control" id="BG" placeholder="35702//">
-                </div>            
+        <div class="row mt-3 mb-2">
+            <div class="col ps-3">
+                <input type="text" class="form-control bootstrap-select print-only border-bottom mb-0" id="KdName" placeholder="">
+                <label for="KdName" class="col-auto pe-0 fst-italic">Name</label>
             </div>
-            <div class="col-5">
-                <div>
-                    <input type="text" class="form-control" id="Sachbearbeiter" placeholder="Sachbearbeiter">
-                </div>  
-            </div>
-            <div class="col-2">
-                <div >
-                    <input type="text" class="form-control" id="Team" placeholder="Team">
-                </div>  
-            </div>
-            <div class="col-2 pt-2" id="Datum">
-                <!--datum wir mit js eingefuegt  -->
+            <div class="col ps-0">
+                <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="KdVorname" placeholder="">
+                <label for="KdVorname" class="col-auto pe-0 fst-italic">Vorname</label>
             </div>
         </div>
+        <div class="row mb-2">
+            <div class="col ps-3">
+                <input type="text" class="form-control bootstrap-select print-only border-bottom" id="KdNr" placeholder="">
+                <label for="KdNr" class="col-auto pe-0 fst-italic">Kunden-Nr.</label>
+            </div>
+            <div class="col ps-0">
+                <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="BDay" placeholder="">
+                <label for="BDay" class="col-auto pe-0 fst-italic">Geburtsdatum</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ps-3">
+                <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="staatsang" placeholder="">
+                <label for="staatsang" class="col-auto pe-0 fst-italic">Staatsangehörigkeit</label>
+            </div>
+            <div class="col ps-0">
+                <select class="form-select bootstrap-select print-only border-bottom" id="TitelStatus">
+                    <option selected>Auswahl öffnen</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                <label for="TitelStatus" class="col-auto pe-0 fst-italic">Aufenthaltstitel/-status nach AufenthG/FreizügG/EU</label>
+            </div>
+         </div>
     </div>
-    <div class="container my-0">
+
+<!--Überschrift-->
+    <div class="mx-2 my-3 border-top border-dark"></div>
+    <div class="container">
         <h1 class="align-baseline fs-3">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
     </div>
-<!--Einleitungswort  -->
+    <div class="mx-2 my-3 border-top border-dark"></div>
+
+    <!--Bearbeitungshinweis  -->
     <div class="container mb-3 fs-6">
         <div class="row alert alert-warning p-0 m-0" role="alert">
             Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für jede ausländische Person in der BG separat durchzuführen, soweit deren Aufenthaltsstatus nach FreizügG/EU unterschiedlich zu der hier geprüften Person ist.  
@@ -45,44 +99,10 @@
             Ergänzende/vertiefende Informationen zur Prüfung von SGB II-Leistungsansprüchen bzw. von SGB II-Ausschlusstatbeständen bei Ausländern stehen in den Fachlichen Weisungen, in der Wissensdatenbank der BA zu den §§ 7, 8 SGB II, dem BA-Intranet sowie im Jobcenter-Intranet in der Datenbank Recht (Suchbegriff „Ausländer“) und über den "Schnellfinder" auf der FU-Seite zur Verfügung.
         </p>          
     </div>
+    <div class="mx-2 my-3 border-top border-dark"></div>
 
-<!--Kundendaten  -->
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col-6 pe-0">
-                <div class="mb-6">
-                    <input type="text" class="form-control" id="Name" placeholder="Name, Vorname">
-                </div>  
-            </div> 
-            <div class="col-3">
-                <div>
-                    <input type="text" class="form-control" id="Kd-Nr." placeholder="Kd-Nr.">
-                </div>
-            </div>   
-            <div class="col-3">
-                <div>
-                    <input type="text" class="form-control" id="Geburtstag" placeholder="Geburtstag">
-                </div>   
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="mb-3">
-                    <label for="Staatsangehörigkeit" class="form-label my-0">Staatsangehörigkeit</label>
-                    <input type="text" class="form-control" id="Staatsangehörigkeit">
-                </div> 
-            </div>
-            <div class="col-7">
-                <label for="title" class="form-label my-0">Aufenthaltstitel/-status nach AufenthG/FreizügG/EU</label>
-                <select class="form-select" id="title">
-                    <option selected>Auswahl öffnen</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-            </div>
-        </div>
-
+<!--Allgemeine Vorabprüfung Dritt -->
+    <div class="container" id="VorabDritt">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
                 <label class="form-check-label" for="Drittstaatler">
@@ -137,6 +157,11 @@
                     <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
                 </label>
             </div>
+    </div>
+
+<!--Allgemeine Vorabprüfung EU-->
+    <div class="container" id="VorabEU">
+        
     </div>
 
 <!--Pruefung kein Ausschluss -->
