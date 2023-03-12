@@ -102,6 +102,7 @@
     <div class="mx-2 my-3 border-top border-dark"></div>
 
 <!--Allgemeine Vorabprüfung Dritt -->
+    <div class="fs-4 ms-3">Allgemeine Vorabprüfung</div>
     <div class="container" id="VorabDritt">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
@@ -126,6 +127,13 @@
                 <label class="form-check-label" for="EWR-Staatler">
                     <b>EWR-Staatler</b> <span class="fst-italic">(Island/Liechtenstein/Norwegen) mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
                 </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Alt-Brite">
+                <label class="form-check-label" for="Alt-Brite">
+                    <b>Alt-Brite</b> <span class="fst-italic">mit nachgewiesenem Titel/Status nach AufenthG?</span>
+                </label> <span class="fst-italic orangeColor mb-3">(vgl. § 11 FreizügG/EU u. FW BA zu §
+                    7 SGB II, Rzn. 7.4, 7.5, 7.27)</span>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer">
@@ -161,332 +169,340 @@
 
 <!--Allgemeine Vorabprüfung EU-->
     <div class="container" id="VorabEU">
-        
+
     </div>
 
+<!--Prüfverlauf Dritt-->
+    <div id="PrüfverlaufDritt" class="">
 <!--Pruefung kein Ausschluss -->
-    <div class="container mt-4" id="paragrListe">
-        <h2 class="fs-4">Prüfung kein Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1-3, § 8 Abs. 2 SGB II</h2>
-        <div>
-            Aufenthaltstitel/-status nach AufenthG (ggf. nach § 81 Abs. 4 fiktioniert), die <b>NICHT</b> zum Ausschluss führen.
-            <p class="my-0"><u>Voraussetzung:</u> Erwerbstätigkeit erlaubt/könnte erlaubt werden.</p>
-            <p class= "orangeColor fst-italic">(ggf. Bewilligungsdauer beachten wg. Gültigkeitsdauer Titel/Status, vgl. Fachliche Weisungen für die Bearbeitung von Anträgen nach dem SGB II (Loseblattsammlung), Ziff. 5 „Bewilligungsdauer“, u. FW BA zu § 41 SGB II, Rzn. 41.11, 41.12, 41.13; vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.10, 7.21, 7.41, 7.48a, Anlage 4)</p>
+        <div class="container mt-4" id="paragrListe">
+            <h2 class="fs-4">(1) Prüfung kein Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1-3, § 8 Abs. 2 SGB II</h2>
+            <div>
+                Aufenthaltstitel/-status nach AufenthG (ggf. nach § 81 Abs. 4 fiktioniert), die <b>NICHT</b> zum Ausschluss führen.
+                <p class="my-0"><u>Voraussetzung:</u> Erwerbstätigkeit erlaubt/könnte erlaubt werden.</p>
+                <p class= "orangeColor fst-italic">(ggf. Bewilligungsdauer beachten wg. Gültigkeitsdauer Titel/Status, vgl. Fachliche Weisungen für die Bearbeitung von Anträgen nach dem SGB II (Loseblattsammlung), Ziff. 5 „Bewilligungsdauer“, u. FW BA zu § 41 SGB II, Rzn. 41.11, 41.12, 41.13; vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.10, 7.21, 7.41, 7.48a, Anlage 4)</p>
+            </div>
+            <div class="row border border-dark">
+                <div class="col">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="1">
+                        <label class="form-check-label" for="1">
+                            § 22 S. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="2">
+                        <label class="form-check-label" for="2">
+                            § 22 S. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="3">
+                        <label class="form-check-label" for="3">
+                            § 23 Abs. 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="4">
+                        <label class="form-check-label" for="4">
+                            § 23 Abs. 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="5">
+                        <label class="form-check-label" for="5">
+                            § 23a Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="6">
+                        <label class="form-check-label" for="6">
+                            § 23a Abs. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="7">
+                        <label class="form-check-label" for="7">
+                            § 24 <span class="fst-italic orangeColor">(ohne Zusatz „wegen Krieges im Heimatland“; vgl. FW BA zu § 7 SGB II, Rz. 7.21 (2)/(4), sowie FA BA zu § 74 SGB II)</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="8">
+                        <label class="form-check-label" for="8">
+                            § 25 Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="9">
+                        <label class="form-check-label" for="9">
+                            § 25 Abs. 2
+                        </label>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="10">
+                        <label class="form-check-label" for="10">
+                            § 25 Abs. 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="11">
+                        <label class="form-check-label" for="11">
+                            § 25 Abs. 4 S. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="12">
+                        <label class="form-check-label" for="12">
+                            § 25 Abs. 4a
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="13">
+                        <label class="form-check-label" for="13">
+                            § 25 Abs. 4b
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="14">
+                        <label class="form-check-label" for="14">
+                            §  25 Abs. 5 <span class="fst-italic orangeColor">(und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt bereits mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor mindestens 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt mindestens 18 Monate; vgl. FW  BA zu § 7 SGB II, Rzn. 7.54 (2), 7.55, 7.57, Anlage 4)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="col ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="15">
+                        <label class="form-check-label" for="15">
+                            § 25a Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="16">
+                        <label class="form-check-label" for="16">
+                            § 25a Abs. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="17">
+                        <label class="form-check-label" for="17">
+                            § 25a Abs. 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="18">
+                        <label class="form-check-label" for="18">
+                            § 25a Abs. 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="19">
+                        <label class="form-check-label" for="19">
+                            § 25b Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="20">
+                        <label class="form-check-label" for="20">
+                        § 25b Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="21">
+                        <label class="form-check-label" for="21">
+                        § 25b Abs. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="22">
+                        <label class="form-check-label" for="22">
+                        § 25b Abs. 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="23">
+                        <label class="form-check-label" for="23">
+                        § 25b Abs. 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="24">
+                        <label class="form-check-label" for="24">
+                        § 25b Abs. 5
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="25">
+                        <label class="form-check-label" for="25">
+                        § 26 Abs. 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="26">
+                        <label class="form-check-label" for="26">
+                        § 26 Abs. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
+                        <label class="form-check-label" for="27">
+                        § 26 Abs. 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
+                        <label class="form-check-label" for="27">
+                        § 26 Abs. 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="28">
+                        <label class="form-check-label" for="28">
+                            § 104c <span class="fs-italic orangeColor">(ggf. Bewilligungsdauer auf letzten Gültigkeitstag begrenzen; vgl. FW BA zu § 7 SGB II, Rzn. 7.61, 7.62, Anlage 4 sowie „Information: Chancen-Aufenthaltsrecht nach § 104c AufenthG – Chancen-Aufenthaltsrecht nach § 104c AufenthG – Zugang zu SGB II-Leistungen, Integrationsaspekten“ in DB Recht)</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <div class="row border border-dark">
-            <div class="col">
+        <div class="container mb-5" id="ausschlussGruendeBlock">
+            <div class="row border border-dark">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="1">
-                    <label class="form-check-label" for="1">
-                        § 22 S. 1
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="29">
+                    <label class="form-check-label" for="29">
+                        Voraussetzungen gem. § 74 Abs. 1 S. 1 SGB II sind erfüllt (erkennungsdienstlich behandelt und Aufenthaltserlaubnis nach § 24 Abs. 1 AufenthG wurde beantragt und Fiktionsbescheinigung nach § 81 Absatz 5 i. V. m. Abs. 3 S. 1 AufenthG liegt vor)
+                        <span class="fs-italic orangeColor">(vgl. FW BA zu § 74 SGB II; JC-AH „Allgemeine Anspruchsvoraussetzungen Ukraine“, Ziff. 1.1)</span>
                     </label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="2">
-                    <label class="form-check-label" for="2">
-                        § 22 S. 2
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="3">
-                    <label class="form-check-label" for="3">
-                        § 23 Abs. 3
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="4">
-                    <label class="form-check-label" for="4">
-                        § 23 Abs. 4
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="5">
-                    <label class="form-check-label" for="5">
-                        § 23a Abs. 1
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="6">
-                    <label class="form-check-label" for="6">
-                        § 23a Abs. 2
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="7">
-                    <label class="form-check-label" for="7">
-                        § 24 <span class="fst-italic orangeColor">(ohne Zusatz „wegen Krieges im Heimatland“; vgl. FW BA zu § 7 SGB II, Rz. 7.21 (2)/(4), sowie FA BA zu § 74 SGB II)</span>
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="8">
-                    <label class="form-check-label" for="8">
-                        § 25 Abs. 1
-                    </label>
-                 </div>
-                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="9">
-                    <label class="form-check-label" for="9">
-                        § 25 Abs. 2
-                    </label>
-                 </div>
             </div>
-            <div class="col ">
+            <div class="row border border-dark">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="10">
-                    <label class="form-check-label" for="10">
-                        § 25 Abs. 3
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="30">
+                    <label class="form-check-label" for="30">
+                        BAMF-Bescheid: Anerkennung als Asylberechtigter im Sinne von Art 16a GG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG
+                        <span class="fs-italic orangeColor">(AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="11">
-                    <label class="form-check-label" for="11">
-                        § 25 Abs. 4 S. 2
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="12">
-                    <label class="form-check-label" for="12">
-                        § 25 Abs. 4a
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="13">
-                    <label class="form-check-label" for="13">
-                        § 25 Abs. 4b
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="14">
-                    <label class="form-check-label" for="14">
-                        §  25 Abs. 5 <span class="fst-italic orangeColor">(und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt bereits mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor mindestens 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt mindestens 18 Monate; vgl. FW  BA zu § 7 SGB II, Rzn. 7.54 (2), 7.55, 7.57, Anlage 4)</span>
-                    </label>
-                  </div>
+                </div>
             </div>
-            <div class="col ">
+            <div class="row border border-dark">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="15">
-                    <label class="form-check-label" for="15">
-                        § 25a Abs. 1
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="31">
+                    <label class="form-check-label" for="31">
+                        BAMF-Bescheid: Anerkennung als GFK-Flüchtling im Sinne von § 3 Abs. 1 AsylG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
+                        <span class="fs-italic orangeColor">(AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="16">
-                    <label class="form-check-label" for="16">
-                        § 25a Abs. 2
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="32">
+                    <label class="form-check-label" for="32">
+                        BAMF-Bescheid: Anerkennung als subsidiär Schutzberechtigter im Sinne von § 4 Abs. 1 AsylG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
+                        <span class="fs-italic orangeColor"> (AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="17">
-                    <label class="form-check-label" for="17">
-                        § 25a Abs. 3
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="33">
+                    <label class="form-check-label" for="33">
+                        BAMF-Bescheid: keine Anerkennung als Asylberechtigter oder GFK-Flüchtling oder subsidiär Schutzberechtigter, aber Verhängung Abschiebungsverbot nach § 60 Abs. 5 od. 7 AufenthG und Titel nach § 25 Abs. 3 AufenthG wurde seitens Ausländeramt erteilt und dem Ausländer bereits (mündlich oder schriftlich) bekannt gegeben (schriftliche Bestätigung Ausländeramt liegt vor); mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
+                        <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rz. 7.59a, Anlage 4)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="18">
-                    <label class="form-check-label" for="18">
-                        § 25a Abs. 4
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="34">
+                    <label class="form-check-label" for="34">
+                        Im Bundesgebiet neugeborenes Kind (noch) ohne eigenen Schutz-/Aufenthaltsstatus; beide Elternteile mit BAMF-Bescheid Anerkennung als Asylberechtigte/GFK-Flüchtlinge/subsidiär Schutzberechtigte mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG; Geburtsurkunde od. Geburtsbescheinigung (beglaubigter Auszug aus Personenstandregister) des Kindes liegt vor 
+                        <span class="fs-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Rzn. 7.58, 7.60a (3. Spiegelpunkt))</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="19">
-                    <label class="form-check-label" for="19">
-                        § 25b Abs. 1
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="35">
+                    <label class="form-check-label" for="35">
+                        Im Bundesgebiet neugeborenes Kind (noch) ohne eigenen Schutz-/Aufenthaltsstatus, mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG und/oder mit/ohne Aufenthaltsgestattung nach § 55 AsylG; beide Elternteile bzw. der allein personensorgeberechtigte Elternteil besaßen/besaß im Zeitpunkt der Geburt und besitzen/besitzt aktuell eine Aufenthaltserlaubnis (außer nach § 25 Abs. 4, 4a, 4b, 5 od. nach § 104a Abs. 1 S. 1 od. nach § 104b AufenthG), eine Niederlassungserlaubnis oder eine Erlaubnis zum Daueraufenthalt-EG nach AufenthG bzw. ihnen war einer dieser Titel bereits (mündlich oder schriftlich) bekannt gegeben worden (schriftliche Bestätigung Ausländeramt liegt vor); Geburtsurkunde od. Geburtsbescheinigung (beglaubigter Auszug aus Personenstandregister) des Kindes liegt vor
+                        <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rzn. 7.58, 7.59a, Newsletter Leistungsrecht SGB II RD NRW, Ausgabe 08/2018, Ziff. 3)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="20">
-                    <label class="form-check-label" for="20">
-                       § 25b Abs. 1
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="36">
+                    <label class="form-check-label" for="36">
+                        Minderjähriges Kind mit Titel nach § 25 Abs. 5 AufenthG, Entscheidung über Aussetzung Abschiebung oder Titelerteilung liegt ggf. noch nicht mindestens 18 Monate zurück oder Zeiträume Aussetzung Abschiebung und Titelbestand zusammen betragen noch nicht mindestens 18 Monate, aber mind. ein Elternteil in Haushaltsgemeinschaft besitzt Titel nach § 25 Abs. 5 AufenthG und Entscheidung über Aussetzung Abschiebung oder Titelerteilung liegt bei diesem bereits 18 Monate zurück oder Gesamtzeitraum Aussetzung Abschiebung und Titelbestand zusammen beträgt bereits mindestens 18 Monate,  Elternteil ist desh. nicht mehr leistungsberechtigt nach AsylbLG (vgl. § 1 Abs. 3 S. 2 AsylbLG)
+                        <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rzn. 7.54 (2), 7.55, 7.57, Anlage 4; ggf. Bewilligungsdauer beachten/WV anlegen bzgl. Vollendung 18. Lebensjahr)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="21">
-                    <label class="form-check-label" for="21">
-                       § 25b Abs. 2
+                </div>
+            </div>
+            <div class="row border border-dark">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="keinAusschluss" id="37">
+                <label class="form-check-label" for="37">
+                    Gültige Niederlassungserlaubnis nach beliebigem Paragrafen AufenthG, i. d. R. aber nicht zwingend i. V. m. § 9 AufenthG (= generelle Bestimmungen Niederlassungserlaubnis) genannt (bei Wiedereinreise ggf. § 51 Abs. 1 Nr. 7 AufenthG – Erlöschen Titel – beachten!) 
+                    <span class="fs-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Rzn. 7.42, 7.45, Anlage 4)</span>
+                </label>
+            </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="38">
+                    <label class="form-check-label" for="38">
+                        Visum zum Familiennachzug/zur Familienzusammenführung nach § 6 Abs. 3 AufenthG und Bezugsperson/Stammberechtigter (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt Aufenthaltstitel nach Kapitel 2 Abschnitt 5 AufenthG*, der nicht (zumindest dem Grunde nach) zum AsylbLG-Leistungsbezug berechtigt
+                        <span class="fs-italic orangeColor">(*jeder Titel nach § 22 bis § 26 AufenthG außer: § 23 Abs. 1 wg. Krieges im Heimatland, § 24 wg. Krieges im Heimatland, § 25 Abs. 4 S. 1, § 25 Abs. 5 und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt noch nicht mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor weniger als 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt noch nicht 18 Monate) (vgl. FW BA zu § 7 SGB II, Rz. 7.48a)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="22">
-                    <label class="form-check-label" for="22">
-                       § 25b Abs. 3
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="39">
+                    <label class="form-check-label" for="39">
+                        Titel nach Kapitel 2 Abschnitt 6 AufenthG*, der keinen Dreimonatsausschluss bewirkt, und Bezugsperson/Stammberechtigter (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt Aufenthaltstitel nach Kapitel 2 Abschnitt 5 AufenthG**, der nicht (zumindest dem Grunde nach) zum AsylbLG-Leistungsbezug berechtigt.
+                        <p class="fs-italic orangeColor my-0">*jeder Titel nach §§ 28 bis 36a AufenthG außer: § 34</p>
+                        <p class="fs-italic orangeColor">**jeder Titel nach § 22 bis § 26 AufenthG außer: § 23 Abs. 1 wg. Krieges im Heimatland, § 24 wg. Krieges im Heimatland, § 25 Abs. 4 S. 1, § 25 Abs. 5 und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt noch nicht mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor weniger als 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt noch nicht 18 Monate)
+                            (vgl. FW BA zu § 7 SGB II, Rzn.7.48a, 7.54 (2), 7.55, 7.57, Anlage 4)</p>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="23">
-                    <label class="form-check-label" for="23">
-                       § 25b Abs. 4
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="40">
+                    <label class="form-check-label" for="40">
+                        Drittstaatler mit Aufenthalts-/Aufnahmezusage nach § 23 Abs. 2 od. Abs. 4 AufenthG
+                        <span class="fs-italic orangeColor">  (vgl. FW BA zu § 7 SGB II, Anlage 4; WDB-Eintrag Nr. 070063 – "Flüchtlinge aus dem Irak mit Aufenthaltszusage nach § 23 Abs. 2 Aufenthaltsgesetz (AufenthG)" (analoge Anwendung))</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="24">
-                    <label class="form-check-label" for="24">
-                       § 25b Abs. 5
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="41">
+                    <label class="form-check-label" for="41">
+                        Ausländer, z.B. afghanische "Ortskraft", oder deren Familienangehöriger mit Titel nach § 22 S. 2 AufenthG od. Visum nach § 14 Abs. 2 i. V. m. § 22 S. 2 AufenthG, keine Aufenthaltsgestattung/kein laufendes Asylverfahren 
+                        <span class="fs-italic orangeColor">(vgl. "Information: Zugang afghanischer Ortskräfte und deren Familienangehörigen zu Grundsicherungsleistungen nach dem SGB II und zum Arbeitsmarkt" in DB Recht)</span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="25">
-                    <label class="form-check-label" for="25">
-                      § 26 Abs. 1
+                </div>
+            </div>
+            <div class="row border border-dark">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="keinAusschluss" id="PrüfDritt1" value="PrüfDritt1">
+                    <label class="form-check-label" for="42">
+                        Keiner der unter (1) genannten Titel/Status liegt vor.
+                        <span class="fs-italic orangeColor"></span>
                     </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="26">
-                    <label class="form-check-label" for="26">
-                      § 26 Abs. 2
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
-                    <label class="form-check-label" for="27">
-                      § 26 Abs. 3
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
-                    <label class="form-check-label" for="27">
-                      § 26 Abs. 4
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="keinAusschluss" id="28">
-                    <label class="form-check-label" for="28">
-                        § 104c <span class="fs-italic orangeColor">(ggf. Bewilligungsdauer auf letzten Gültigkeitstag begrenzen; vgl. FW BA zu § 7 SGB II, Rzn. 7.61, 7.62, Anlage 4 sowie „Information: Chancen-Aufenthaltsrecht nach § 104c AufenthG – Chancen-Aufenthaltsrecht nach § 104c AufenthG – Zugang zu SGB II-Leistungen, Integrationsaspekten“ in DB Recht)</span>
-                    </label>
-                  </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary d-none my-3" id="btnAusschlussGruendeBlock">Auswahl erweitern</button>
+    </div>
 
-            </div>
-        </div>
+<!--Prüfverlauf EU-->
+    <div id="PrüfverlaufEU">
+
     </div>
-    <div class="container" id="ausschlussGruendeBlock">
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="29">
-                <label class="form-check-label" for="29">
-                    Voraussetzungen gem. § 74 Abs. 1 S. 1 SGB II sind erfüllt (erkennungsdienstlich behandelt und Aufenthaltserlaubnis nach § 24 Abs. 1 AufenthG wurde beantragt und Fiktionsbescheinigung nach § 81 Absatz 5 i. V. m. Abs. 3 S. 1 AufenthG liegt vor)
-                    <span class="fs-italic orangeColor">(vgl. FW BA zu § 74 SGB II; JC-AH „Allgemeine Anspruchsvoraussetzungen Ukraine“, Ziff. 1.1)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="30">
-                <label class="form-check-label" for="30">
-                    BAMF-Bescheid: Anerkennung als Asylberechtigter im Sinne von Art 16a GG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG
-                    <span class="fs-italic orangeColor">(AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="31">
-                <label class="form-check-label" for="31">
-                    BAMF-Bescheid: Anerkennung als GFK-Flüchtling im Sinne von § 3 Abs. 1 AsylG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
-                    <span class="fs-italic orangeColor">(AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="32">
-                <label class="form-check-label" for="32">
-                    BAMF-Bescheid: Anerkennung als subsidiär Schutzberechtigter im Sinne von § 4 Abs. 1 AsylG mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
-                    <span class="fs-italic orangeColor"> (AsylbLG-Leistungsberechtigung endet gem. § 1 Abs. 3 AsylbLG erst mit Ablauf des Monats, in dem der Bescheid über die Anerkennung bekannt gegeben wurde; vgl. FW BA zu § 7 SGB II, Rz. 7.58)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="33">
-                <label class="form-check-label" for="33">
-                    BAMF-Bescheid: keine Anerkennung als Asylberechtigter oder GFK-Flüchtling oder subsidiär Schutzberechtigter, aber Verhängung Abschiebungsverbot nach § 60 Abs. 5 od. 7 AufenthG und Titel nach § 25 Abs. 3 AufenthG wurde seitens Ausländeramt erteilt und dem Ausländer bereits (mündlich oder schriftlich) bekannt gegeben (schriftliche Bestätigung Ausländeramt liegt vor); mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG 
-                    <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rz. 7.59a, Anlage 4)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="34">
-                <label class="form-check-label" for="34">
-                    Im Bundesgebiet neugeborenes Kind (noch) ohne eigenen Schutz-/Aufenthaltsstatus; beide Elternteile mit BAMF-Bescheid Anerkennung als Asylberechtigte/GFK-Flüchtlinge/subsidiär Schutzberechtigte mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG; Geburtsurkunde od. Geburtsbescheinigung (beglaubigter Auszug aus Personenstandregister) des Kindes liegt vor 
-                    <span class="fs-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Rzn. 7.58, 7.60a (3. Spiegelpunkt))</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="35">
-                <label class="form-check-label" for="35">
-                    Im Bundesgebiet neugeborenes Kind (noch) ohne eigenen Schutz-/Aufenthaltsstatus, mit/ohne Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG und/oder mit/ohne Aufenthaltsgestattung nach § 55 AsylG; beide Elternteile bzw. der allein personensorgeberechtigte Elternteil besaßen/besaß im Zeitpunkt der Geburt und besitzen/besitzt aktuell eine Aufenthaltserlaubnis (außer nach § 25 Abs. 4, 4a, 4b, 5 od. nach § 104a Abs. 1 S. 1 od. nach § 104b AufenthG), eine Niederlassungserlaubnis oder eine Erlaubnis zum Daueraufenthalt-EG nach AufenthG bzw. ihnen war einer dieser Titel bereits (mündlich oder schriftlich) bekannt gegeben worden (schriftliche Bestätigung Ausländeramt liegt vor); Geburtsurkunde od. Geburtsbescheinigung (beglaubigter Auszug aus Personenstandregister) des Kindes liegt vor
-                    <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rzn. 7.58, 7.59a, Newsletter Leistungsrecht SGB II RD NRW, Ausgabe 08/2018, Ziff. 3)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="36">
-                <label class="form-check-label" for="36">
-                    Minderjähriges Kind mit Titel nach § 25 Abs. 5 AufenthG, Entscheidung über Aussetzung Abschiebung oder Titelerteilung liegt ggf. noch nicht mindestens 18 Monate zurück oder Zeiträume Aussetzung Abschiebung und Titelbestand zusammen betragen noch nicht mindestens 18 Monate, aber mind. ein Elternteil in Haushaltsgemeinschaft besitzt Titel nach § 25 Abs. 5 AufenthG und Entscheidung über Aussetzung Abschiebung oder Titelerteilung liegt bei diesem bereits 18 Monate zurück oder Gesamtzeitraum Aussetzung Abschiebung und Titelbestand zusammen beträgt bereits mindestens 18 Monate,  Elternteil ist desh. nicht mehr leistungsberechtigt nach AsylbLG (vgl. § 1 Abs. 3 S. 2 AsylbLG)
-                    <span class="fs-italic orangeColor"> (vgl. FW BA zu § 7 SGB II, Rzn. 7.54 (2), 7.55, 7.57, Anlage 4; ggf. Bewilligungsdauer beachten/WV anlegen bzgl. Vollendung 18. Lebensjahr)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="keinAusschluss" id="37">
-            <label class="form-check-label" for="37">
-                Gültige Niederlassungserlaubnis nach beliebigem Paragrafen AufenthG, i. d. R. aber nicht zwingend i. V. m. § 9 AufenthG (= generelle Bestimmungen Niederlassungserlaubnis) genannt (bei Wiedereinreise ggf. § 51 Abs. 1 Nr. 7 AufenthG – Erlöschen Titel – beachten!) 
-                <span class="fs-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Rzn. 7.42, 7.45, Anlage 4)</span>
-            </label>
-        </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="38">
-                <label class="form-check-label" for="38">
-                    Visum zum Familiennachzug/zur Familienzusammenführung nach § 6 Abs. 3 AufenthG und Bezugsperson/Stammberechtigter (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt Aufenthaltstitel nach Kapitel 2 Abschnitt 5 AufenthG*, der nicht (zumindest dem Grunde nach) zum AsylbLG-Leistungsbezug berechtigt
-                    <span class="fs-italic orangeColor">(*jeder Titel nach § 22 bis § 26 AufenthG außer: § 23 Abs. 1 wg. Krieges im Heimatland, § 24 wg. Krieges im Heimatland, § 25 Abs. 4 S. 1, § 25 Abs. 5 und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt noch nicht mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor weniger als 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt noch nicht 18 Monate) (vgl. FW BA zu § 7 SGB II, Rz. 7.48a)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="39">
-                <label class="form-check-label" for="39">
-                    Titel nach Kapitel 2 Abschnitt 6 AufenthG*, der keinen Dreimonatsausschluss bewirkt, und Bezugsperson/Stammberechtigter (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt Aufenthaltstitel nach Kapitel 2 Abschnitt 5 AufenthG**, der nicht (zumindest dem Grunde nach) zum AsylbLG-Leistungsbezug berechtigt.
-                    <p class="fs-italic orangeColor my-0">*jeder Titel nach §§ 28 bis 36a AufenthG außer: § 34</p>
-                    <p class="fs-italic orangeColor">**jeder Titel nach § 22 bis § 26 AufenthG außer: § 23 Abs. 1 wg. Krieges im Heimatland, § 24 wg. Krieges im Heimatland, § 25 Abs. 4 S. 1, § 25 Abs. 5 und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt noch nicht mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor weniger als 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt noch nicht 18 Monate)
-                        (vgl. FW BA zu § 7 SGB II, Rzn.7.48a, 7.54 (2), 7.55, 7.57, Anlage 4)</p>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="40">
-                <label class="form-check-label" for="40">
-                    Drittstaatler mit Aufenthalts-/Aufnahmezusage nach § 23 Abs. 2 od. Abs. 4 AufenthG
-                    <span class="fs-italic orangeColor">  (vgl. FW BA zu § 7 SGB II, Anlage 4; WDB-Eintrag Nr. 070063 – "Flüchtlinge aus dem Irak mit Aufenthaltszusage nach § 23 Abs. 2 Aufenthaltsgesetz (AufenthG)" (analoge Anwendung))</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="41">
-                <label class="form-check-label" for="41">
-                    Ausländer, z.B. afghanische "Ortskraft", oder deren Familienangehöriger mit Titel nach § 22 S. 2 AufenthG od. Visum nach § 14 Abs. 2 i. V. m. § 22 S. 2 AufenthG, keine Aufenthaltsgestattung/kein laufendes Asylverfahren 
-                    <span class="fs-italic orangeColor">(vgl. "Information: Zugang afghanischer Ortskräfte und deren Familienangehörigen zu Grundsicherungsleistungen nach dem SGB II und zum Arbeitsmarkt" in DB Recht)</span>
-                </label>
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="keinAusschluss" id="42">
-                <label class="form-check-label" for="42">
-                    Keiner der unter (1.1) genannten Titel/Status liegt vor.
-                    <span class="fs-italic orangeColor"></span>
-                </label>
-            </div>
-        </div>
-    </div>
-    <button type="button" class="btn btn-primary d-none my-3" id="btnAusschlussGruendeBlock">Auswahl erweitern</button>
 
 
     <script src="js/bootstrap.js"></script>
