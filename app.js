@@ -32,11 +32,11 @@ document.querySelectorAll('#paragrListe input[type=radio]').forEach(function(rad
 function hideTextBlöcke(){
   const Blöcke = document.querySelectorAll("#ausschlussGruendeBlock .row");
   Blöcke.forEach(function(block){
-  block.classList.add("d-none");
-  if (block.querySelector("input[type=radio]").checked){
-    block.classList.remove("d-none");
-  };
-  });
+    block.classList.add("d-none");
+    if (block.querySelector("input[type=radio]").checked){
+      block.classList.remove("d-none");
+      };
+    });
 };
 document.querySelectorAll("#ausschlussGruendeBlock input[type=radio]").forEach(function(radio){
   radio.addEventListener('click', function(){
