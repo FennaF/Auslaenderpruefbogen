@@ -13,34 +13,105 @@ document.querySelectorAll('input[type=radio][name="Fiktionsbescheinigung"]').for
     });
   });
 
-//Textblöcke unter Prüfverlauf Dritt (1) werden ausgeblendet, wenn Auswahl in der paragraphen liste
 const ausschlussTextBlock = document.querySelector("#ausschlussGruendeBlock");
 const btnAusschlussGruendeBlock = document.querySelector("#btnAusschlussGruendeBlock");
-document.querySelectorAll('#paragrListe input[type=radio]').forEach(function(radio) {
-    radio.addEventListener('click', function() {
-        ausschlussTextBlock.classList.add("d-none");
-        btnAusschlussGruendeBlock.classList.remove("d-none");
-    });
-  });
+const paragListe = document.querySelector('#paragrListe');
+const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruendeBlock input[type=radio]")
 
-  btnAusschlussGruendeBlock.addEventListener('click', function(event){
-    ausschlussTextBlock.classList.remove("d-none");
-    this.classList.add("d-none");
-  });
-  
-//Wenn ein Textblock unter Prüfverlauf Dritt (1) ausgewählt wird, werden alle anderen Auswahlmöglichkeiten ausgeblendet, bis auf den ausgewählten text block
-function hideTextBlöcke(){
-  const Blöcke = document.querySelectorAll("#ausschlussGruendeBlock .row");
-  Blöcke.forEach(function(block){
-    block.classList.add("d-none");
-    if (block.querySelector("input[type=radio]").checked){
-      block.classList.remove("d-none");
-      };
+//Prüfverlauf Dritt
+  //Prüfung 1
+    //Ausblenden Textblöcke unter (1), wenn Auswahl in paragraphen Liste
+    document.querySelectorAll('#paragrListe input[type=radio]').forEach(function(radio) {
+        radio.addEventListener('click', function() {
+            ausschlussTextBlock.classList.add("d-none");
+
+            /**restlichen Prüfverläufe ausblenden */
+            document.getElementById("PrüfverlaufDritt1.2").classList.add("d-none");
+
+            btnAusschlussGruendeBlock.classList.remove("d-none");
+
+            /**Endergebnis einblenden */
+
+
+        });
+      });
+
+      btnAusschlussGruendeBlock.addEventListener('click', function(event){
+        ausschlussTextBlock.classList.remove("d-none");
+        paragListe.classList.remove("d-none");
+        showTextblöckeUndPraragrListe();
+        this.classList.add("d-none");
+      });
+      
+    //Ausblenden paragraphen Liste und Textblöcke, wenn Auswahl eines Textblocks, ausgewählten Texblock einblenden + reset Button + Ende der Prüfung
+    //Wenn "Keiner der unter (1) genannten Titel/Status" ausgewählt wird -> alles bleibt eingeblendet -> nächster Prüfblock öffnet sich
+    function hideTextBlöcke(){
+      const Blöcke = document.querySelectorAll("#ausschlussGruendeBlock .row");
+      Blöcke.forEach(function(block){
+        block.classList.add("d-none");
+        if (block.querySelector("input[type=radio]").checked){
+          block.classList.remove("d-none");
+          };
+          btnAusschlussGruendeBlock.classList.remove("d-none");
+        });
+    };
+
+    function showTextblöckeUndPraragrListe(){
+      const Blöcke = document.querySelectorAll("#ausschlussGruendeBlock .row");
+      Blöcke.forEach(function(block){
+        block.classList.remove("d-none");
+      });
+    };
+
+    ausschlussGruendeBlockRadios.forEach(function(radio){
+      radio.addEventListener('click', function(){
+        if(radio.value !== "PrüfDritt1"){
+          hideTextBlöcke();
+          paragListe.classList.add('d-none');
+
+          /**Endergebnis einblenden */
+
+        } else{
+          console.log("Prüfung dooferweise nicht zu Ende. WEITER GEHTS, YIPII!")
+          document.getElementById("PrüfverlaufDritt12").classList.remove("d-none");
+        }
+        /*
+        if(radio.value !== "PrüfDritt1"){
+          console.log("funktioniert");
+        }else{
+          console.log("scheiße")}
+        */
+      });
     });
-};
-document.querySelectorAll("#ausschlussGruendeBlock input[type=radio]").forEach(function(radio){
-  radio.addEventListener('click', function(){
-    hideTextBlöcke();
-    document.querySelector('#paragrListe').classList.add('d-none');
-  });
-});
+
+    //Prfüng 2
+    function hideTextBlöcke2(){
+      const Blöcke = document.querySelectorAll("#PrüfverlaufDritt12 .row");
+      Blöcke.forEach(function(block){
+        block.classList.add("d-none");
+        if (block.querySelector("input[type=radio]").checked){
+          block.classList.remove("d-none");
+          };
+        });
+    };
+
+    document.querySelectorAll("#PrüfverlaufDritt12 input[type=radio]").forEach(function(radio){
+      radio.addEventListener('click', function(){
+        if(radio.value !== "weiter"){
+          hideTextBlöcke2();
+          document.getElementById("PrüfverlaufDritt221").classList.add("d-none");
+          /**Endergebnis einblenden */
+
+        } else{
+          console.log("Prüfung dooferweise auch hier nicht zu Ende. WEITER GEHTS, VAMOS!")
+          document.getElementById("PrüfverlaufDritt221").classList.remove("d-none");
+        }
+        /*
+        if(radio.value !== "PrüfDritt1"){
+          console.log("funktioniert");
+        }else{
+          console.log("scheiße")}
+        */
+      });
+    });
+
