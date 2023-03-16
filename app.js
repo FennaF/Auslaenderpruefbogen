@@ -225,6 +225,7 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
 
       //Prüfung221
       const PrüfverlaufDritt221BlockARadios = document.querySelectorAll("#PrüfverlaufDritt221BlockA input[type=radio]")
+      const PrüfverlaufDritt221BlockBRadios = document.querySelectorAll("#PrüfverlaufDritt221BlockB input[type=radio]")
       const PrüfverlaufDritt221BlockA = document.querySelector("#PrüfverlaufDritt221BlockA")
       const PrüfverlaufDritt221BlockB = document.querySelector("#PrüfverlaufDritt221BlockB")
       const btnEinblenden221 = document.querySelector("#btnPrüfverlaufDritt221")
@@ -261,11 +262,29 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         });
       });
 
+      PrüfverlaufDritt221BlockBRadios.forEach(function(radio){
+        radio.addEventListener("click", function(){
+          if(radio.value === "Ja"){
+            PrüfverlaufDritt221BlockA.classList.add("d-none")
+            BlockBRowsHide();
+          }
+        })
+      })
+
+      function BlockBRowsHide(radioSetToJa){
+        console.log(radioSetToJa)
+      }
+
         //Button um die versteckten Elemente wieder einzublenden
         btnEinblenden221.addEventListener("click", function(){
           PrüfverlaufDritt221BlockA.classList.remove("d-none")
           PrüfverlaufDritt221BlockB.classList.remove("d-none")
-          //showRows221()
+
+          PrüfverlaufDritt222.classList.add("d-none")
+          PrüfverlaufDritt223.classList.add("d-none")
+          PrüfverlaufDritt224.classList.add("d-none")
+          PrüfverlaufDritt225.classList.add("d-none")
+          PrüfverlaufDritt226.classList.add("d-none")
 
           this.classList.add("d-none")
         })
