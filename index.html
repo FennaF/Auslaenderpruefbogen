@@ -649,7 +649,7 @@
         </div>
 
         <!--Prüfverlauf Dritt Pruefung 2.1-->
-        <div id="PrüfverlaufDritt21" class="">
+        <div id="PrüfverlaufDritt21" class="d-none">
             <div class="fs-4">
                 (2.1) Prüfung kein Ausschluss nach §7 Abs. 1 S. 2 Nr. 1-3, § 8 Abs. 2 SGB II
             </div>
@@ -679,7 +679,7 @@
                         </label>
                     </div>
                     <div class="col-3 mt-3 text-center border border-primary">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein1" id="PrüfverlaufDritt21JaNein12">
+                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein1" id="PrüfverlaufDritt21JaNein12" value="">
                         <label class="form-check-label" for="PrüfverlaufDritt21JaNein12">
                             Nein
                         </label>
@@ -721,7 +721,7 @@
                                 </label>
                         </div>
                     <div class="col-3 mt-3 text-center border border-primary">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein3" id="PrüfverlaufDritt21JaNein32">
+                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein3" id="PrüfverlaufDritt21JaNein32" value="">
                         <label class="form-check-label" for="PrüfverlaufDritt21JaNein32">
                             Nein
                         </label>
@@ -781,7 +781,7 @@
                             7.12a, 7.13, 7.27 (2, 3)); (ggf. WV anlegen bzgl. Vollendung 21. Lebensjahr!)
                         </label>
                     </div>
-                                        <div class="col-3 mt-3 mx-4 text-center border border-primary">
+                    <div class="col-3 mt-3 mx-4 text-center border border-primary">
                         <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein6" id="PrüfverlaufDritt21JaNein61" value="Ja">
                         <label class="form-check-label" for="PrüfverlaufDritt21JaNein61">
                             Ja
@@ -850,7 +850,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="row py-3 border border-dark">
+                <div class="row py-3 border border-dark" id="PrüfverlaufDritt21chkb">
                     <div class="form-check">
                         <input class = "form-check-input" type="checkbox" name="" id="PrüfverlaufDritt21Block9">
                         <label class="form-check-label" for="PrüfverlaufDritt21Block9">
@@ -863,133 +863,149 @@
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.1-->
-        <div id="PrüfverlaufDritt221" class="mb-3 d-none">
+        <div id="PrüfverlaufDritt221" class="mb-3 ">
             <div class="fs-4 mb-3">
                 (2.2.1) Prüfen von Ausschlussgründen nach § 7 Abs. 1 S. 2 Nr. 1 SGB II (Drei-Monats-Ausschluss)
                 während der ersten drei Monate nach Einreise/Geburt:
             </div>
-            <div id="PrüfverlaufDritt2.2.1Block" class="container">
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block1">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block1">
-                            Einreise in das/Geburt im Bundesgebiet vor mehr als drei Monaten (gerechnet ab Datum, ab dem
-                            Leistungen begehrt werden)? (vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.21, 7.23 (5), 7.29, 7.41, Anlage 4)
-                        </label>
+            <div id="PrüfverlaufDritt221Block" class="container">
+                <div id="PrüfverlaufDritt221BlockA">
+                    <div class="row py-3 border border-dark">
+                        <div class="form-check">
+                            <label class="form-check-label" for="">
+                                Einreise in das/Geburt im Bundesgebiet vor mehr als drei Monaten (gerechnet ab Datum, ab dem
+                                Leistungen begehrt werden)? (vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.21, 7.23 (5), 7.29, 7.41, Anlage 4)
+                            </label>
+                        </div>
+                        <div class="col-3  mt-3 mx-4 text-center border border-primary">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNein1" id="PrüfverlaufDritt221JaNein11" value="Ja">
+                            <label class="form-check-label" for="PrüfverlaufDritt221JaNein11">
+                                Ja
+                            </label>
+                        </div>
+                        <div class="col-3 mt-3 text-center border border-primary">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNein1" id="PrüfverlaufDritt21JaNein212" value="">
+                            <label class="form-check-label" for="PrüfverlaufDritt21JaNein212">
+                                Nein
+                            </label>
+                        </div>                       
                     </div>
                 </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block2">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block2">
-                            „Schengen-Visum“ nach § 6 AufenthG (Durchreise, Aufenthalt); Erwerbstätigkeit erlaubt oder
-                            könnte erlaubt werden oder nicht erlaubt? (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                <div id="PrüfverlaufDritt221BlockB">
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block2">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block2">
+                                „Schengen-Visum“ nach § 6 AufenthG (Durchreise, Aufenthalt); Erwerbstätigkeit erlaubt oder
+                                könnte erlaubt werden oder nicht erlaubt? (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block3">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block3">
-                            Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG? (vgl. FW BA zu § 7 SGB II, Rzn. 7.23 (4, Seite 6/10 5), 7.40, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block3">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block3">
+                                Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG? (vgl. FW BA zu § 7 SGB II, Rzn. 7.23 (4, Seite 6/10 5), 7.40, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block4">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block4">
-                            Aufenthaltstitel nach Kapitel 2 Abschnitt 6 AufenthG (jeder Titel nach § 27 bis § 36 AufenthG) und
-                            Bezugsperson (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt beliebige Niederlassungserlaubnis
-                            nach AufenthG, aber keine nach § 26 AufenthG? (vgl. FW BA zu § 7 SGB II, Rzn. 7.48, 7.48a,
-                            Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block4">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block4">
+                                Aufenthaltstitel nach Kapitel 2 Abschnitt 6 AufenthG (jeder Titel nach § 27 bis § 36 AufenthG) und
+                                Bezugsperson (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt beliebige Niederlassungserlaubnis
+                                nach AufenthG, aber keine nach § 26 AufenthG? (vgl. FW BA zu § 7 SGB II, Rzn. 7.48, 7.48a,
+                                Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block5">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block5">
-                            Aufenthaltstitel nach § 18c AufenthG (Aufenthaltserlaubnis zur Arbeitsplatzsuche für qualifizierte
-                            Fachkräfte)? (vgl. FW BA zu § 7 SGB II, Rz. 7.42 (3), Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block5">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block5">
+                                Aufenthaltstitel nach § 18c AufenthG (Aufenthaltserlaubnis zur Arbeitsplatzsuche für qualifizierte
+                                Fachkräfte)? (vgl. FW BA zu § 7 SGB II, Rz. 7.42 (3), Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block6">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block6">
-                            Aufenthaltstitel nach § 31 AufenthG (eigenständiges Aufenthaltsrecht des Ehegatten)? (vgl. FW BA
-                            zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block6">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block6">
+                                Aufenthaltstitel nach § 31 AufenthG (eigenständiges Aufenthaltsrecht des Ehegatten)? (vgl. FW BA
+                                zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block7">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block7">
-                            Aufenthaltstitel nach § 34 Abs. 2 AufenthG (eigenständiges Aufenthaltsrecht des volljährigen
-                            Kindes)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block7">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block7">
+                                Aufenthaltstitel nach § 34 Abs. 2 AufenthG (eigenständiges Aufenthaltsrecht des volljährigen
+                                Kindes)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block8">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block8">
-                            Aufenthaltstitel nach § 35 AufenthG (eigenständiges, unbefristetes Aufenthaltsrecht der Kinder)?
-                            (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block8">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block8">
+                                Aufenthaltstitel nach § 35 AufenthG (eigenständiges, unbefristetes Aufenthaltsrecht der Kinder)?
+                                (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block9">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block9">
-                            Aufenthaltstitel nach § 37 AufenthG (Recht auf Wiederkehr)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block9">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block9">
+                                Aufenthaltstitel nach § 37 AufenthG (Recht auf Wiederkehr)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block10">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block10">
-                            Aufenthaltstitel nach § 38 AufenthG (Aufenthaltstitel für ehemalige Deutsche)? (vgl. FW BA zu § 7
-                            SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block10">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block10">
+                                Aufenthaltstitel nach § 38 AufenthG (Aufenthaltstitel für ehemalige Deutsche)? (vgl. FW BA zu § 7
+                                SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block11">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block11">
-                            Aufenthaltstitel nach § 38a AufenthG (Aufenthaltserlaubnis für in anderen Mitgliedstaaten der
-                            Europäischen Union langfristig Aufenthaltsberechtigte)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block11">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block11">
+                                Aufenthaltstitel nach § 38a AufenthG (Aufenthaltserlaubnis für in anderen Mitgliedstaaten der
+                                Europäischen Union langfristig Aufenthaltsberechtigte)? (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block13">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block13">
-                            Aufenthaltstitel nach § 4 Abs. 2 AufenthG (Aufenthaltsrecht gem. Assoziationsabkommen
-                            EWG/Türkei), Titel ausgestellt ab 01.03.2020? (vgl. FW BA zu § 7 SGB II, Anlage 4)
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block13">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block13">
+                                Aufenthaltstitel nach § 4 Abs. 2 AufenthG (Aufenthaltsrecht gem. Assoziationsabkommen
+                                EWG/Türkei), Titel ausgestellt ab 01.03.2020? (vgl. FW BA zu § 7 SGB II, Anlage 4)
+                            </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row border border-dark">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block14">
-                        <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block14">
-                            Keiner der unter (2.2.1) genannten Titel/Status liegt vor.
-                        </label>
+                    <div class="row border border-dark">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt2.2.1Block" id="PrüfverlaufDritt2.2.1Block14">
+                            <label class="form-check-label" for="PrüfverlaufDritt2.2.1Block14">
+                                Keiner der unter (2.2.1) genannten Titel/Status liegt vor.
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button type="button" class="btn btn-primary d-none my-3" id="btnPrüfverlaufDritt221">Auswahlmöglichkeiten zu (2.2.1) vollständig einblenden</button>
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.2-->
-        <div id="PrüfverlaufDritt222" class="mb-3">
+        <div id="PrüfverlaufDritt222" class="mb-3 d-none">
             <div class="fs-4 mb-3">
                 (2.2.2) Prüfen von Ausschlussgründen nach § 7 Abs. 1 S. 2 Nr. 2a SGB II (kein Aufenthaltsrecht) ab dem
                 vierten Monat nach Einreise/Geburt
@@ -1018,7 +1034,7 @@
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.3-->
-        <div id="PrüfverlaufDritt223" class="mb-3">
+        <div id="PrüfverlaufDritt223" class="mb-3 d-none">
                 <div class="fs-4 mb-3">
                     (2.2.3) Prüfen von Ausschlussgründen nach § 7 Abs. 1 S. 2 Nr. 2b SGB II (Aufenthaltsrecht ergibt sich
                     allein aus dem Zweck der Arbeitsuche) ab dem vierten Monat nach Einreise/Geburt:
@@ -1139,7 +1155,7 @@
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.4-->
-        <div id="PrüfverlaufDritt224" class="mb-3">
+        <div id="PrüfverlaufDritt224" class="mb-3 d-none">
             <div class="fs-4 mb-3">
                 (2.2.4) Prüfen von Ausschlussgründen nach § 7 Abs. 1 S. 2 Nr. 3 SGB II ab dem Tag der
                 Einreise/Geburt (Anspruch (dem Grunde nach) auf AsylbLG-Leistungen):
@@ -1255,7 +1271,7 @@
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.5-->
-        <div id="PrüfverlaufDritt225" class="mb-3">
+        <div id="PrüfverlaufDritt225" class="mb-3 d-none">
             <div class="fs-4 mb-3">
                (2.2.5) Prüfen von Ausschlussgründen nach § 8 Abs. 2 SGB II (Erwerbsfähigkeit – Erwerbstätigkeit ist
                 nicht erlaubt und könnte auch nicht erlaubt werden)
@@ -1301,7 +1317,7 @@
         </div>
 
         <!--Prüfverlauf Dritt Prüfung 2.2.6-->
-        <div id="PrüfverlaufDritt226" class="mb-3">
+        <div id="PrüfverlaufDritt226" class="mb-3 d-none">
             <div class="fs-4 mb-3">
                 (2.2.6) Prüfen von Ausschlussgründen nach § 8 Abs. 2 SGB II (Erwerbsfähigkeit – Erwerbstätigkeit ist
                 nicht erlaubt und könnte auch nicht erlaubt werden)
