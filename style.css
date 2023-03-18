@@ -16,3 +16,11 @@
   }
 }
 
+input[type="radio"]{
+  border-color: #000;
+}
+
+input[type="checkbox"]{
+  border-color: #000;
+}
+

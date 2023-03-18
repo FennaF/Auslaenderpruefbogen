@@ -238,12 +238,14 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
 
       PrüfverlaufDritt221BlockARadios.forEach(function(radio){
         radio.addEventListener("click", function(){
-          console.log("klappt");
           if(radio.value === "Ja"){
             PrüfverlaufDritt221BlockB.classList.add("d-none");
             btnEinblenden221.classList.remove("d-none");
-            PrüfverlaufDritt222.classList.remove("d-none");
+            checkbox221.checked = false
+            //Endergebnis einblenden
 
+
+            PrüfverlaufDritt222.classList.add("d-none")
             PrüfverlaufDritt223.classList.add("d-none")
             PrüfverlaufDritt224.classList.add("d-none")
             PrüfverlaufDritt225.classList.add("d-none")
@@ -266,19 +268,66 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         radio.addEventListener("click", function(){
           if(radio.value === "Ja"){
             PrüfverlaufDritt221BlockA.classList.add("d-none")
-            BlockBRowsHide();
+            BlockBRowsHide(this);
+            btnEinblenden221.classList.remove("d-none");
+            checkbox221.checked = false
+            //Endergebnis einblenden
+
+            PrüfverlaufDritt223.classList.add("d-none")
+            PrüfverlaufDritt224.classList.add("d-none")
+            PrüfverlaufDritt225.classList.add("d-none")
+            PrüfverlaufDritt226.classList.add("d-none")
+
+          }else{
+            PrüfverlaufDritt221BlockA.classList.remove("d-none")
+            BlockBRowsShow();
+
+            btnEinblenden221.classList.add("d-none");
+            PrüfverlaufDritt222.classList.add("d-none");
+            PrüfverlaufDritt223.classList.add("d-none")
+            PrüfverlaufDritt224.classList.add("d-none")
+            PrüfverlaufDritt225.classList.add("d-none")
+            PrüfverlaufDritt226.classList.add("d-none")
           }
         })
       })
 
       function BlockBRowsHide(radioSetToJa){
-        console.log(radioSetToJa)
+        console.log(radioSetToJa.id)
+        PrüfverlaufDritt221BlockB.querySelectorAll(".row").forEach(function(row){
+          row.classList.add("d-none")
+          row.querySelectorAll("input[type=radio]").forEach(function(radio){
+            if(radio.id === radioSetToJa.id){
+              row.classList.remove("d-none")
+            }
+          })
+        })
       }
 
+      function BlockBRowsShow(){
+        PrüfverlaufDritt221BlockB.querySelectorAll(".row").forEach(function(row){
+          row.classList.remove("d-none");
+        })
+      }
+
+      const checkbox221 = document.querySelector("#Dritt221chk")
+      checkbox221.addEventListener("click", function(){
+        if(checkbox221.checked){
+          PrüfverlaufDritt221BlockA.classList.remove("d-none")
+          BlockBRowsShow()
+          document.querySelectorAll("#PrüfverlaufDritt221 input[type=radio]").forEach(function(radio){
+            if(radio.value === ""){
+              radio.checked = true
+            }
+          })
+          PrüfverlaufDritt222.classList.remove("d-none");
+        }
+      })
         //Button um die versteckten Elemente wieder einzublenden
         btnEinblenden221.addEventListener("click", function(){
           PrüfverlaufDritt221BlockA.classList.remove("d-none")
           PrüfverlaufDritt221BlockB.classList.remove("d-none")
+          BlockBRowsShow()
 
           PrüfverlaufDritt222.classList.add("d-none")
           PrüfverlaufDritt223.classList.add("d-none")
@@ -289,8 +338,252 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           this.classList.add("d-none")
         })
 
+        //Prüfung222
+        const Dritt222 = document.querySelectorAll("#Dritt222 input[type=radio]")
+        Dritt222.forEach(function(radio){
+          radio.addEventListener("click", function(){
+            if(radio.value === "Ja"){
+              //Endgergebnis einblenden
 
-      
+              PrüfverlaufDritt223.classList.add("d-none")
+              PrüfverlaufDritt224.classList.add("d-none")
+              PrüfverlaufDritt225.classList.add("d-none")
+              PrüfverlaufDritt226.classList.add("d-none")
+            }else{
+              PrüfverlaufDritt223.classList.remove("d-none")
+            }
+          })
+        })
+
+        //Prüfung 223
+        const Dritt223Rows = document.querySelectorAll("#Dritt223 .row")
+        const Dritt223Radios = document.querySelectorAll("#Dritt223 input[type=radio]")
+        const Dritt223Btn = document.querySelector("#btnDritt223")
+        const Dritt223chkb = document.querySelector("#Dritt223chk")
+
+        Dritt223Radios.forEach(function(radio){
+          radio.addEventListener("click", function(){
+            if(radio.value === "Ja"){
+              Dritt223Hide(this)
+              Dritt223Btn.classList.remove("d-none")
+              Dritt223chkb.checked = false
+              PrüfverlaufDritt224.classList.add("d-none")
+              PrüfverlaufDritt225.classList.add("d-none")
+              PrüfverlaufDritt226.classList.add("d-none")
+              //Endergebnis einblenden
+
+            } else {
+              Dritt223Show()
+              Dritt223Btn.classList.add("d-none")
+
+            }
+          })
+        })
+
+        function Dritt223Hide(clickedRadio){
+          Dritt223Rows.forEach(function(row){
+            row.classList.add("d-none")
+            row.querySelectorAll("input[type=radio]").forEach(function(radio){
+              if(radio.id === clickedRadio.id){
+                row.classList.remove("d-none")
+              }
+            })
+          })
+        }
+
+        function Dritt223Show(){
+          Dritt223Rows.forEach(function(row){
+            row.classList.remove("d-none")
+          })
+        }
+
+        Dritt223Btn.addEventListener("click", function(){
+          Dritt223Show()
+          this.classList.add("d-none")
+        })
+
+        Dritt223chkb.addEventListener("click", function(){
+          if(Dritt223chkb.checked){
+            Dritt223Radios.forEach(function(radio){
+              if(radio.value === ""){
+                radio.checked = true
+              }
+            })
+            PrüfverlaufDritt224.classList.remove("d-none")
+          }
+        })
+
+        //Prüfung 224
+        const Dritt224Rows = document.querySelectorAll("#Dritt224 .row")
+        const Dritt224Radios = document.querySelectorAll("#Dritt224 input[type=radio]")
+        const Dritt224Btn = document.querySelector("#btnDritt224")
+        const Dritt224chkb = document.querySelector("#Dritt224chk")
+
+        Dritt224Radios.forEach(function(radio){
+          radio.addEventListener("click", function(){
+            if(radio.value === "Ja"){
+              Dritt224Hide(this)
+              Dritt224Btn.classList.remove("d-none")
+              Dritt224chkb.checked = false
+
+              PrüfverlaufDritt225.classList.add("d-none")
+              PrüfverlaufDritt226.classList.add("d-none")
+              //Endergebnis einblenden
+
+            } else {
+              Dritt224Show()
+              Dritt224Btn.classList.add("d-none")
+
+            }
+          })
+        })
+
+        function Dritt224Hide(clickedRadio){
+          Dritt224Rows.forEach(function(row){
+            row.classList.add("d-none")
+            row.querySelectorAll("input[type=radio]").forEach(function(radio){
+              if(radio.id === clickedRadio.id){
+                row.classList.remove("d-none")
+              }
+            })
+          })
+        }
+
+        function Dritt224Show(){
+          Dritt224Rows.forEach(function(row){
+            row.classList.remove("d-none")
+          })
+        }
+
+        Dritt224Btn.addEventListener("click", function(){
+          Dritt224Show()
+          this.classList.add("d-none")
+        })
+
+        Dritt224chkb.addEventListener("click", function(){
+          if(Dritt224chkb.checked){
+            Dritt224Radios.forEach(function(radio){
+              if(radio.value === ""){
+                radio.checked = true
+              }
+            })
+            PrüfverlaufDritt225.classList.remove("d-none")
+          }
+        })
+
+        //Prüfung 225
+        const Dritt225Rows = document.querySelectorAll("#Dritt225 .row")
+        const Dritt225Radios = document.querySelectorAll("#Dritt225 input[type=radio]")
+        const Dritt225Btn = document.querySelector("#btnDritt225")
+        const Dritt225chkb = document.querySelector("#Dritt225chk")
+
+        Dritt225Radios.forEach(function(radio){
+          radio.addEventListener("click", function(){
+            if(radio.value === "Ja"){
+              Dritt225Hide(this)
+              Dritt225Btn.classList.remove("d-none")
+              Dritt225chkb.checked = false
+
+              PrüfverlaufDritt226.classList.add("d-none")
+              //Endergebnis einblenden
+
+            } else {
+              Dritt225Show()
+              Dritt225Btn.classList.add("d-none")
+
+            }
+          })
+        })
+
+        function Dritt225Hide(clickedRadio){
+          Dritt225Rows.forEach(function(row){
+            row.classList.add("d-none")
+            row.querySelectorAll("input[type=radio]").forEach(function(radio){
+              if(radio.id === clickedRadio.id){
+                row.classList.remove("d-none")
+              }
+            })
+          })
+        }
+
+        function Dritt225Show(){
+          Dritt225Rows.forEach(function(row){
+            row.classList.remove("d-none")
+          })
+        }
+
+        Dritt225Btn.addEventListener("click", function(){
+          Dritt225Show()
+          this.classList.add("d-none")
+        })
+
+        Dritt225chkb.addEventListener("click", function(){
+          if(Dritt225chkb.checked){
+            Dritt225Radios.forEach(function(radio){
+              if(radio.value === ""){
+                radio.checked = true
+              }
+            })
+            PrüfverlaufDritt226.classList.remove("d-none")
+          }
+        })
+
+      //Prüfung 226
+        const Dritt226Rows = document.querySelectorAll("#Dritt226 .row")
+        const Dritt226Radios = document.querySelectorAll("#Dritt226 input[type=radio]")
+        const Dritt226Btn = document.querySelector("#btnDritt226")
+        const Dritt226chkb = document.querySelector("#Dritt226chk")
+
+        Dritt226Radios.forEach(function(radio){
+          radio.addEventListener("click", function(){
+            if(radio.value === "Ja"){
+              Dritt226Hide(this)
+              Dritt226Btn.classList.remove("d-none")
+              Dritt226chkb.checked = false
+              //Endergebnis einblenden
+
+            } else {
+              Dritt226Show()
+              Dritt226Btn.classList.add("d-none")
+
+            }
+          })
+        })
+
+        function Dritt226Hide(clickedRadio){
+          Dritt226Rows.forEach(function(row){
+            row.classList.add("d-none")
+            row.querySelectorAll("input[type=radio]").forEach(function(radio){
+              if(radio.id === clickedRadio.id){
+                row.classList.remove("d-none")
+              }
+            })
+          })
+        }
+
+        function Dritt226Show(){
+          Dritt226Rows.forEach(function(row){
+            row.classList.remove("d-none")
+          })
+        }
+
+        Dritt226Btn.addEventListener("click", function(){
+          Dritt226Show()
+          this.classList.add("d-none")
+        })
+
+        Dritt226chkb.addEventListener("click", function(){
+          if(Dritt226chkb.checked){
+            Dritt226Radios.forEach(function(radio){
+              if(radio.value === ""){
+                radio.checked = true
+              }
+            })
+            //Endergebnis einblenden
+            
+          }
+        }) 
+
       
       
 
