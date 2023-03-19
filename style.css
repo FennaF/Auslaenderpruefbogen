@@ -7,6 +7,9 @@
   padding-right: 30px;
 }
 
+.showOnPrint{
+  display: none;
+}
 @media print {
   .print-only {
     border: none;
@@ -14,7 +17,14 @@
   .border-bottom{
     border-bottom: 2px solid #000;
   }
+  .btn{
+    display: none;
+  }
+  .showOnPrint{
+    display: block;
+  }
 }
+
 
 input[type="radio"]{
   border-color: #000;
