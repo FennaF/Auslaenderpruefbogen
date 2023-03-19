@@ -19,6 +19,15 @@ const paragListe = document.querySelector('#paragrListe');
 const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruendeBlock input[type=radio]")
 
 //Prüfverlauf Dritt
+const ErgebnisÜberschirft = document.querySelector("#ErgebnisÜberschrift")
+const Ergebnis11 = document.querySelector("#ErgebnisDritt11")
+const Ergebnis12 = document.querySelector("#ErgebnisDritt12")
+const Ergebnis221 = document.querySelector("#ErgebnisDritt221")
+const Ergebnis222 = document.querySelector("#ErgebnisDritt222")
+const Ergebnis223 = document.querySelector("#ErgebnisDritt223")
+const Ergebnis224 = document.querySelector("#ErgebnisDritt224")
+const Ergebnis225 = document.querySelector("#ErgebnisDritt225")
+const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
   //Prüfung 1
     //Ausblenden Textblöcke unter (1), wenn Auswahl in paragraphen Liste
     document.querySelectorAll('#paragrListe input[type=radio]').forEach(function(radio) {
@@ -37,8 +46,17 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
 
             btnAusschlussGruendeBlock.classList.remove("d-none");
 
-            /**Endergebnis einblenden */
+            /**Endergebnis einblenden + übrigen Ergebnisse ausblenden */
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.remove("d-none")
 
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
         });
       });
 
@@ -47,6 +65,10 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         ausschlussTextBlock.classList.remove("d-none");
         paragListe.classList.remove("d-none");
         showTextblöcke();
+
+        ErgebnisÜberschirft.classList.add("d-none")
+        Ergebnis11.classList.add("d-none")
+
         this.classList.add("d-none");
       });
       
@@ -68,12 +90,24 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
             document.getElementById("PrüfverlaufDritt225").classList.add("d-none");
             document.getElementById("PrüfverlaufDritt226").classList.add("d-none");
 
-          /**Endergebnis einblenden */
+          /**Endergebnis einblenden + übrigen Ergebnisse ausblenden*/
+          ErgebnisÜberschirft.classList.remove("d-none")
+          Ergebnis11.classList.remove("d-none")
 
+          Ergebnis12.classList.add("d-none")
+          Ergebnis221.classList.add("d-none")
+          Ergebnis222.classList.add("d-none")
+          Ergebnis223.classList.add("d-none")
+          Ergebnis224.classList.add("d-none")
+          Ergebnis225.classList.add("d-none")
+          Ergebnis226.classList.add("d-none")
         } else{
           document.querySelector("#PrüfverlaufDritt12").classList.remove("d-none");
           //einzelnen Elemente aus den restlichen Prüfschritten wieder einblenden, sicherhaltshalber, falls die mal ausgeblendet wurden
           showTextblöcke12();
+
+          ErgebnisÜberschirft.classList.add("d-none")
+          Ergebnis11.classList.add("d-none")
         }
       });
     });
@@ -116,11 +150,24 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           document.getElementById("PrüfverlaufDritt225").classList.add("d-none");
           document.getElementById("PrüfverlaufDritt226").classList.add("d-none");
           /**Endergebnis einblenden */
+          ErgebnisÜberschirft.classList.remove("d-none")
+          Ergebnis12.classList.remove("d-none")
+
+          Ergebnis11.classList.add("d-none")
+          Ergebnis221.classList.add("d-none")
+          Ergebnis222.classList.add("d-none")
+          Ergebnis223.classList.add("d-none")
+          Ergebnis224.classList.add("d-none")
+          Ergebnis225.classList.add("d-none")
+          Ergebnis226.classList.add("d-none")
 
         } else{
           document.getElementById("PrüfverlaufDritt21").classList.remove("d-none");
           showTextblöcke12();
           showTextBlöcke21();
+
+          ErgebnisÜberschirft.classList.add("d-none")
+          Ergebnis12.classList.add("d-none")
         }
       });
     });
@@ -144,6 +191,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           //Button um die versteckten Elemente wieder einzublenden
           document.querySelector("#btnPrüfverlaufDritt12").addEventListener('click', function(event){
             showTextblöcke12();
+            ErgebnisÜberschirft.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
             this.classList.add("d-none");
           });
 
@@ -164,8 +213,21 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
               document.getElementById("PrüfverlaufDritt224").classList.add("d-none");
               document.getElementById("PrüfverlaufDritt225").classList.add("d-none");
               document.getElementById("PrüfverlaufDritt226").classList.add("d-none");
+
+              ErgebnisÜberschirft.classList.remove("d-none")
+              Ergebnis11.classList.remove("d-none")
+
+              Ergebnis12.classList.add("d-none")
+              Ergebnis221.classList.add("d-none")
+              Ergebnis222.classList.add("d-none")
+              Ergebnis223.classList.add("d-none")
+              Ergebnis224.classList.add("d-none")
+              Ergebnis225.classList.add("d-none")
+              Ergebnis226.classList.add("d-none")
             }else{
               showTextBlöcke21();
+              ErgebnisÜberschirft.classList.add("d-none")
+              Ergebnis11.classList.add("d-none")
             };
           });
         });
@@ -197,6 +259,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
                   //Button um die versteckten Elemente wieder einzublenden
                   document.querySelector("#btnPrüfverlaufDritt21").addEventListener('click', function(event){
                     showTextBlöcke21();
+                    ErgebnisÜberschirft.classList.add("d-none")
+                    Ergebnis11.classList.add("d-none")
                     document.querySelector("#PrüfverlaufDritt21chkb").classList.remove("d-none");
                     this.classList.add("d-none");
                   });
@@ -242,10 +306,9 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
             PrüfverlaufDritt221BlockB.classList.add("d-none");
             btnEinblenden221.classList.remove("d-none");
             checkbox221.checked = false
-            //Endergebnis einblenden
 
-
-            PrüfverlaufDritt222.classList.add("d-none")
+            //restlichen Prüfverläufe ausblenden
+            PrüfverlaufDritt222.classList.remove("d-none")
             PrüfverlaufDritt223.classList.add("d-none")
             PrüfverlaufDritt224.classList.add("d-none")
             PrüfverlaufDritt225.classList.add("d-none")
@@ -254,12 +317,12 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           } else{
             PrüfverlaufDritt221BlockB.classList.remove("d-none");
             btnEinblenden221.classList.add("d-none");
-
             PrüfverlaufDritt222.classList.add("d-none")
             PrüfverlaufDritt223.classList.add("d-none")
             PrüfverlaufDritt224.classList.add("d-none")
             PrüfverlaufDritt225.classList.add("d-none")
             PrüfverlaufDritt226.classList.add("d-none")
+
           }
         });
       });
@@ -271,16 +334,22 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
             BlockBRowsHide(this);
             btnEinblenden221.classList.remove("d-none");
             checkbox221.checked = false
-            //Endergebnis einblenden
-
-            PrüfverlaufDritt223.classList.add("d-none")
-            PrüfverlaufDritt224.classList.add("d-none")
-            PrüfverlaufDritt225.classList.add("d-none")
-            PrüfverlaufDritt226.classList.add("d-none")
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.remove("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
 
           }else{
             PrüfverlaufDritt221BlockA.classList.remove("d-none")
             BlockBRowsShow();
+            ErgebnisÜberschirft.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
 
             btnEinblenden221.classList.add("d-none");
             PrüfverlaufDritt222.classList.add("d-none");
@@ -328,12 +397,16 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           PrüfverlaufDritt221BlockA.classList.remove("d-none")
           PrüfverlaufDritt221BlockB.classList.remove("d-none")
           BlockBRowsShow()
-
-          PrüfverlaufDritt222.classList.add("d-none")
-          PrüfverlaufDritt223.classList.add("d-none")
-          PrüfverlaufDritt224.classList.add("d-none")
-          PrüfverlaufDritt225.classList.add("d-none")
-          PrüfverlaufDritt226.classList.add("d-none")
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.add	("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
 
           this.classList.add("d-none")
         })
@@ -344,6 +417,16 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
           radio.addEventListener("click", function(){
             if(radio.value === "Ja"){
               //Endgergebnis einblenden
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.remove("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
 
               PrüfverlaufDritt223.classList.add("d-none")
               PrüfverlaufDritt224.classList.add("d-none")
@@ -351,6 +434,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
               PrüfverlaufDritt226.classList.add("d-none")
             }else{
               PrüfverlaufDritt223.classList.remove("d-none")
+              ErgebnisÜberschirft.classList.add("d-none")
+              Ergebnis222.classList.add("d-none")
             }
           })
         })
@@ -370,12 +455,22 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
               PrüfverlaufDritt224.classList.add("d-none")
               PrüfverlaufDritt225.classList.add("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
-              //Endergebnis einblenden
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.remove("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
 
             } else {
               Dritt223Show()
               Dritt223Btn.classList.add("d-none")
-
+              ErgebnisÜberschirft.classList.add("d-none")
+              Ergebnis223.classList.add("d-none")
             }
           })
         })
@@ -399,6 +494,16 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
 
         Dritt223Btn.addEventListener("click", function(){
           Dritt223Show()
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.add("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
           this.classList.add("d-none")
         })
 
@@ -428,12 +533,22 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
 
               PrüfverlaufDritt225.classList.add("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
-              //Endergebnis einblenden
+              //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.remove("d-none")
+            Ergebnis225.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
 
             } else {
               Dritt224Show()
               Dritt224Btn.classList.add("d-none")
-
+              ErgebnisÜberschirft.classList.add("d-none")
+              Ergebnis224.classList.add("d-none")
             }
           })
         })
@@ -458,6 +573,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         Dritt224Btn.addEventListener("click", function(){
           Dritt224Show()
           this.classList.add("d-none")
+          ErgebnisÜberschirft.classList.add("d-none")
+          Ergebnis224.classList.add("d-none")
         })
 
         Dritt224chkb.addEventListener("click", function(){
@@ -485,12 +602,22 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
               Dritt225chkb.checked = false
 
               PrüfverlaufDritt226.classList.add("d-none")
-              //Endergebnis einblenden
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis225.classList.remove("d-none")
+            Ergebnis226.classList.add("d-none")
 
             } else {
               Dritt225Show()
               Dritt225Btn.classList.add("d-none")
-
+              Ergebnis225.classList.add("d-none")
+              ErgebnisÜberschirft.classList.add("d-none")
             }
           })
         })
@@ -515,6 +642,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         Dritt225Btn.addEventListener("click", function(){
           Dritt225Show()
           this.classList.add("d-none")
+          Ergebnis225.classList.add("d-none")
+          ErgebnisÜberschirft.classList.add("d-none")
         })
 
         Dritt225chkb.addEventListener("click", function(){
@@ -540,11 +669,22 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
               Dritt226Hide(this)
               Dritt226Btn.classList.remove("d-none")
               Dritt226chkb.checked = false
-              //Endergebnis einblenden
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis226.classList.remove("d-none")
+            Ergebnis225.classList.add("d-none")
 
             } else {
               Dritt226Show()
               Dritt226Btn.classList.add("d-none")
+              Ergebnis226.classList.add("d-none")
+              ErgebnisÜberschirft.classList.add("d-none")
 
             }
           })
@@ -570,6 +710,8 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
         Dritt226Btn.addEventListener("click", function(){
           Dritt226Show()
           this.classList.add("d-none")
+          Ergebnis226.classList.add("d-none")
+          ErgebnisÜberschirft.add("d-none")
         })
 
         Dritt226chkb.addEventListener("click", function(){
@@ -579,8 +721,16 @@ const ausschlussGruendeBlockRadios = document.querySelectorAll("#ausschlussGruen
                 radio.checked = true
               }
             })
-            //Endergebnis einblenden
-            
+            //Endergebnis einblenden + übrigen Ergebnisse ausblenden
+            ErgebnisÜberschirft.classList.remove("d-none")
+            Ergebnis11.classList.add("d-none")
+            Ergebnis12.classList.add("d-none")
+            Ergebnis222.classList.add("d-none")
+            Ergebnis221.classList.add("d-none")
+            Ergebnis224.classList.add("d-none")
+            Ergebnis223.classList.add("d-none")
+            Ergebnis226.classList.add("d-none")
+            Ergebnis225.classList.remove("d-none")
           }
         }) 
 
