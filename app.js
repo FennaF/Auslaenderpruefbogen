@@ -1,7 +1,87 @@
+//Set Date in bottom right of the Document to currentDate
 const currentDate = new Date();
 document.querySelector("#Datum").innerHTML = currentDate.toLocaleDateString();
 
-// Toggle Visibily Fiktionsbescheinigung
+//Toggle Visibility of Prüfverlauf Dritt und EU je nachdem was in der Vorauswahl ausgewählt wurde, Funktionen in onclick atrribute in index.html eingefügt
+const PrüfverlaufDritt = document.querySelector("#PrüfverlaufDritt")
+const PrüfverlaufEU = document.querySelector("#PrüfverlaufEU")
+
+function ShowPrüfDritt(){
+  PrüfverlaufDritt.classList.remove("d-none")
+}
+function HidePrüfDritt(){
+  PrüfverlaufDritt.classList.add("d-none")
+}
+function ShowPrüfEU(){
+  PrüfverlaufEU.classList.remove("d-none")
+}
+function HidePrüfEU(){
+  PrüfverlaufEU.classList.add("d-none")
+}
+//Toggle Visibility of Unteroptionen in der Allgemeinen Vorabprüfung, Funktionen in onclick atrribute in index.html eingefügt
+const UnterOp1 = document.querySelector("#UnterOp1")
+const UnterOp2 = document.querySelector("#UnterOp2")
+const UnterOp3 = document.querySelector("#UnterOp3")
+const UnterOp4 = document.querySelector("#UnterOp4")
+function toggleUnterOp1(){
+  UnterOp1.classList.remove("d-none")
+  UnterOp2.classList.add("d-none")
+  UnterOp3.classList.add("d-none")
+  UnterOp4.classList.add("d-none")
+}
+function toggleUnterOp2(){
+  UnterOp2.classList.remove("d-none")
+  UnterOp1.classList.add("d-none")
+  UnterOp3.classList.add("d-none")
+  UnterOp4.classList.add("d-none")
+}
+function toggleUnterOp3(){
+  UnterOp3.classList.remove("d-none")
+  UnterOp2.classList.add("d-none")
+  UnterOp1.classList.add("d-none")
+  UnterOp4.classList.add("d-none")
+}
+function toggleUnterOp4(){
+  UnterOp3.classList.add("d-none")
+  UnterOp2.classList.add("d-none")
+  UnterOp1.classList.add("d-none")
+  UnterOp4.classList.remove("d-none")
+}
+
+//Unteroptionen verstecken und radios der unter optionen auf falsch setzten, wenn Auswahl auf Drittstaatler, Staatenloser 
+//Funktionen in onclick atrribute in index.html eingefügt
+function UnterOpsFalseSetzen(){
+  UnterOp1.querySelectorAll("input[type=radio]").forEach(function(radio){
+    radio.checked = false
+  })
+  UnterOp2.querySelectorAll("input[type=radio]").forEach(function(radio){
+    radio.checked = false
+  })
+  UnterOp3.querySelectorAll("input[type=radio]").forEach(function(radio){
+    radio.checked = false
+  })
+  UnterOp4.querySelectorAll("input[type=radio]").forEach(function(radio){
+    radio.checked = false
+  })
+  UnterOp1.classList.add("d-none")
+  UnterOp2.classList.add("d-none")
+  UnterOp3.classList.add("d-none")
+  UnterOp4.classList.add("d-none")
+
+  ShowFiktBlock()
+}
+
+//Toggle Visibility of Fiktionsbescheinigungsblock, wird nur angezeigt, wenn Vorabprüfung auch Prüfverlauf Dritt sichbar macht
+const FiktBlock = document.querySelector("#VorabFikt")
+function HideFiktBlock(){
+  FiktBlock.classList.add("d-none")
+}
+function ShowFiktBlock(){
+  FiktBlock.classList.remove("d-none")
+}
+
+
+// Toggle Visibily Fiktionsbescheinigung Unterpunkt
 const chboxTitel = document.querySelector("#bestaetigungTitel");
 document.querySelectorAll('input[type=radio][name="Fiktionsbescheinigung"]').forEach(function(radio) {
     radio.addEventListener('change', function() {

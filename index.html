@@ -103,68 +103,126 @@
 
 <!--Allgemeine Vorabprüfung Dritt -->
     <div class="fs-4 ms-3">Allgemeine Vorabprüfung</div>
-    <div class="container" id="VorabDritt">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler">
+    <div class="container mb-4" id="VorabDritt">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler" onclick="UnterOpsFalseSetzen(); ShowPrüfDritt();HidePrüfEU()">
                 <label class="form-check-label" for="Drittstaatler">
                     <b>Drittstaatler</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Staatenloser">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Staatenloser" onclick="UnterOpsFalseSetzen(); ShowPrüfDritt();HidePrüfEU()">
                 <label class="form-check-label" for="Staatenloser">
                     <b>Staatenloser</b> <span class="fst-italic">mit/ohne Titel/Status nach AufenthG od. mit Aufenthaltskarte nach § 5 FreizügG/EU und mit gewöhnlichem Aufenthalt im Bundesgebiet</span>
                 </label>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Unionsbürger">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Unionsbürger" onclick="toggleUnterOp1()">
                 <label class="form-check-label" for="Unionsbürger">
-                    <b>Unionsbürger</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                    <b>Unionsbürger</b>
                 </label>
+                <div class="form-check d-none" id="UnterOp1">
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf1" id="VorabUnterPrüf11" onclick="ShowFiktBlock(); ShowPrüfDritt();HidePrüfEU()">
+                        <label class="form-check-label" for="VorabUnterPrüf11">
+                            mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im
+                            Bundesgebiet
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf1" id="VorabUnterPrüf12" onclick="HideFiktBlock(); ShowPrüfEU(); HidePrüfDritt()">
+                        <label class="form-check-label" for="VorabUnterPrüf12">
+                            ohne Titel Titel/Status nach AufenthG, aber mit gewöhnlichem Aufenthalt im Bundesgebiet
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler" onclick="toggleUnterOp2()">
                 <label class="form-check-label" for="EWR-Staatler">
-                    <b>EWR-Staatler</b> <span class="fst-italic">(Island/Liechtenstein/Norwegen) mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                    <b>EWR-Staatler</b>
                 </label>
+                <div class="form-check d-none" id="UnterOp2">
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf2" id="VorabUnterPrüf21" onclick="ShowFiktBlock(); ShowPrüfDritt();HidePrüfEU()">
+                        <label class="form-check-label" for="VorabUnterPrüf21">
+                            mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im
+                            Bundesgebiet
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf2" id="VorabUnterPrüf22" onclick="HideFiktBlock(); ShowPrüfEU(); HidePrüfDritt()">
+                        <label class="form-check-label" for="VorabUnterPrüf22">
+                            ohne Titel Titel/Status nach AufenthG, aber mit gewöhnlichem Aufenthalt im Bundesgebiet
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Alt-Brite">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Alt-Brite" onclick="toggleUnterOp3()">
                 <label class="form-check-label" for="Alt-Brite">
-                    <b>Alt-Brite</b> <span class="fst-italic">mit nachgewiesenem Titel/Status nach AufenthG?</span>
-                </label> <span class="fst-italic orangeColor mb-3">(vgl. § 11 FreizügG/EU u. FW BA zu §
-                    7 SGB II, Rzn. 7.4, 7.5, 7.27)</span>
+                    <b>Alt-Brite</b>
+                </label>
+                <div class="form-check d-none" id="UnterOp3">
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf3" id="VorabUnterPrüf31" onclick="ShowFiktBlock(); ShowPrüfDritt();HidePrüfEU()">
+                        <label class="form-check-label" for="VorabUnterPrüf31">
+                            mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im
+                            Bundesgebiet
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf3" id="VorabUnterPrüf32" onclick="HideFiktBlock(); ShowPrüfEU(); HidePrüfDritt()">
+                        <label class="form-check-label" for="VorabUnterPrüf32">
+                            ohne Titel Titel/Status nach AufenthG, aber mit gewöhnlichem Aufenthalt im Bundesgebiet
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer">
+            <div class="form-check py-2">
+                <input class="form-check-input" type="radio" name="Staatseinordnung" id="Schweizer" onclick="toggleUnterOp4()">
                 <label class="form-check-label" for="Schweizer">
-                    <b>Schweizer</b> <span class="fst-italic">mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im Bundesgebiet</span>
+                    <b>Schweizer</b>
                 </label>
+                <div class="form-check d-none" id="UnterOp4">
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf4" id="VorabUnterPrüf41" onclick="ShowFiktBlock(); ShowPrüfDritt();HidePrüfEU()">
+                        <label class="form-check-label" for="VorabUnterPrüf41">
+                            mit Titel/Status nach AufenthG und gewöhnlichem Aufenthalt im
+                            Bundesgebiet
+                        </label>
+                    </div>
+                    <div>
+                        <input class="form-check-input border-danger" type="radio" name="VorabUnterPrüf4" id="VorabUnterPrüf42" onclick="HideFiktBlock(); ShowPrüfEU(); HidePrüfDritt()">
+                        <label class="form-check-label" for="VorabUnterPrüf42">
+                            ohne Titel Titel/Status nach AufenthG, aber mit gewöhnlichem Aufenthalt im Bundesgebiet
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="fst-italic orangeColor mb-3">
-                (bzgl.. gewöhnlichen Aufenthalts im Bundesgebiet, vgl. § 7 Abs. 1 S. 1 Nr. 4 SGB II u. FW BA zu § 7 SGB II, Rzn. 7.2, 7.3, 7.6, 7.27, 7.40, Anlage 4)
-            </div>
+    </div>
 
-            <div class="form-check" >
-                <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="Abs4AufenthG" value="1">
-                <label class="form-check-label" for="Abs4AufenthG">
-                    Es liegt eine <b>Fiktionsbescheinigung (FB) nach § 81 Abs. 4 AufenthG vor</b>
-                </label>
-            </div>
-            <div class="form-check d-none ms-4" id="bestaetigungTitel">
-                <input class="form-check-input" type="checkbox" value="" id="checkTitel">
-                <label class="form-check-label" for="checkTitel">
-                    Es wird bestätigt, dass der der FB zugrunde liegende Titel ebenfalls vorliegt (Nur bei Vorliegen des zugehörigen Titels ist eine weitere Bearbeitung möglich!)
-                    <span class="orangeColor fst-italic">(vgl. FW BA zu § 7 SGB II, Rz. 7.41 (3))</span>
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="Wohnsitzauflage" value="0">
-                <label class="form-check-label" for="Wohnsitzauflage">
-                    Es liegt keine Wohnsitzauflage nach § 12a AufenthG vor, die zur Unzuständigkeit des JC Köln führt
-                    <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
-                </label>
-            </div>
+    <div id="VorabFikt" class="container d-none">
+        <div class="form-check" >
+            <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="Abs4AufenthG" value="1">
+            <label class="form-check-label" for="Abs4AufenthG">
+                Es liegt eine <b>Fiktionsbescheinigung (FB) nach § 81 Abs. 4 AufenthG vor</b>
+            </label>
+        </div>
+        <div class="form-check d-none ms-4" id="bestaetigungTitel">
+            <input class="form-check-input" type="checkbox" value="" id="checkTitel">
+            <label class="form-check-label" for="checkTitel">
+                Es wird bestätigt, dass der der FB zugrunde liegende Titel ebenfalls vorliegt (Nur bei Vorliegen des zugehörigen Titels ist eine weitere Bearbeitung möglich!)
+                <span class="orangeColor fst-italic">(vgl. FW BA zu § 7 SGB II, Rz. 7.41 (3))</span>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="Fiktionsbescheinigung" id="Wohnsitzauflage" value="0">
+            <label class="form-check-label" for="Wohnsitzauflage">
+                Es liegt keine Wohnsitzauflage nach § 12a AufenthG vor, die zur Unzuständigkeit des JC Köln führt
+                <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
+            </label>
+        </div>
     </div>
 
 <!--Allgemeine Vorabprüfung EU-->
@@ -173,7 +231,7 @@
     </div>
 
 <!--Prüfverlauf Dritt-->
-    <div id="PrüfverlaufDritt" class="">
+    <div id="PrüfverlaufDritt" class="d-none">
         <!--Prüfverlauf Dritt Pruefung kein Ausschluss -->
         <div class="container mt-4" id="">
             <h2 class="fs-4">(1) Prüfung kein Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1-3, § 8 Abs. 2 SGB II</h2>
@@ -1749,8 +1807,8 @@
 
 
 <!--Prüfverlauf EU-->
-    <div id="PrüfverlaufEU">
-
+    <div id="PrüfverlaufEU" class="d-none">
+        Hier kommt der Prüfverlauf aus dem EU Bogen hin, BAUSTELLE :D
     </div>
 
 <!--ErgebnisseDritt-->

@@ -10,6 +10,7 @@
 .showOnPrint{
   display: none;
 }
+
 @media print {
   .print-only {
     border: none;
