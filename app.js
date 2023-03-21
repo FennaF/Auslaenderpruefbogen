@@ -2,18 +2,23 @@
 const currentDate = new Date();
 document.querySelector("#Datum").innerHTML = currentDate.toLocaleDateString();
 
+//Bildschirm nach oben scrollen, damit die neu eingeblendeten Inhalte deutlisch erkennbar werden
+
+
 //Toggle Visibility of Prüfverlauf Dritt und EU je nachdem was in der Vorauswahl ausgewählt wurde, Funktionen in onclick atrribute in index.html eingefügt
 const PrüfverlaufDritt = document.querySelector("#PrüfverlaufDritt")
 const PrüfverlaufEU = document.querySelector("#PrüfverlaufEU")
 
 function ShowPrüfDritt(){
   PrüfverlaufDritt.classList.remove("d-none")
+  window.scrollBy(0, 500)
 }
 function HidePrüfDritt(){
   PrüfverlaufDritt.classList.add("d-none")
 }
 function ShowPrüfEU(){
   PrüfverlaufEU.classList.remove("d-none")
+  window.scrollBy(0, 500)
 }
 function HidePrüfEU(){
   PrüfverlaufEU.classList.add("d-none")
@@ -188,6 +193,8 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
           ErgebnisÜberschirft.classList.add("d-none")
           Ergebnis11.classList.add("d-none")
+
+          window.scrollBy(0, 500)
         }
       });
     });
@@ -248,6 +255,8 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
           ErgebnisÜberschirft.classList.add("d-none")
           Ergebnis12.classList.add("d-none")
+
+          window.scrollBy(0, 500)
         }
       });
     });
@@ -352,8 +361,8 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               showTextBlöcke21();
               setRadios21ToNein();
               document.querySelector("#PrüfverlaufDritt221").classList.remove("d-none");
+              window.scrollBy(0, 500)
             };
-            console.log(checkbox21.checked);
           });
 
           function setRadios21ToNein(){
@@ -470,6 +479,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             }
           })
           PrüfverlaufDritt222.classList.remove("d-none");
+          window.scrollBy(0, 500)
         }
       })
         //Button um die versteckten Elemente wieder einzublenden
@@ -512,10 +522,12 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               PrüfverlaufDritt224.classList.add("d-none")
               PrüfverlaufDritt225.classList.add("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
+              window.scrollBy(0, 500)
             }else{
               PrüfverlaufDritt223.classList.remove("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
               Ergebnis222.classList.add("d-none")
+              window.scrollBy(0, 500)
             }
           })
         })
@@ -595,6 +607,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               }
             })
             PrüfverlaufDritt224.classList.remove("d-none")
+            window.scrollBy(0, 500)
           }
         })
 
@@ -665,6 +678,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               }
             })
             PrüfverlaufDritt225.classList.remove("d-none")
+            window.scrollBy(0, 500)
           }
         })
 
@@ -734,6 +748,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               }
             })
             PrüfverlaufDritt226.classList.remove("d-none")
+            window.scrollBy(0, 500)
           }
         })
 
@@ -811,6 +826,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             Ergebnis223.classList.add("d-none")
             Ergebnis226.classList.add("d-none")
             Ergebnis225.classList.remove("d-none")
+            window.scrollBy(0, 500)
           }
         }) 
 
