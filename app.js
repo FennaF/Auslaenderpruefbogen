@@ -11,6 +11,7 @@ const PrüfverlaufEU = document.querySelector("#PrüfverlaufEU")
 
 function ShowPrüfDritt(){
   PrüfverlaufDritt.classList.remove("d-none")
+  ShowFiktUndWohnsitzauflage()
   window.scrollBy(0, 500)
 }
 function HidePrüfDritt(){
@@ -18,6 +19,7 @@ function HidePrüfDritt(){
 }
 function ShowPrüfEU(){
   PrüfverlaufEU.classList.remove("d-none")
+  HideFiktUndWohnsitzauflage()
   window.scrollBy(0, 500)
 }
 function HidePrüfEU(){
@@ -72,31 +74,38 @@ function UnterOpsFalseSetzen(){
   UnterOp2.classList.add("d-none")
   UnterOp3.classList.add("d-none")
   UnterOp4.classList.add("d-none")
-
-  ShowFiktBlock()
 }
 
-//Toggle Visibility of Fiktionsbescheinigungsblock, wird nur angezeigt, wenn Vorabprüfung auch Prüfverlauf Dritt sichbar macht
-const FiktBlock = document.querySelector("#VorabFikt")
-function HideFiktBlock(){
-  FiktBlock.classList.add("d-none")
-}
-function ShowFiktBlock(){
-  FiktBlock.classList.remove("d-none")
-}
+//Chekcboxen für Fiktionsbescheinigung und Wohnsitzauflage werden nur angezeigt, wenn durch die Allgemeine Vorabprüfung der Prüfverlauf Dritt eingeblendet wird
+const FiktUndWohnsitzauflage = document.querySelector("#FiktUndWohnsitzauflage")
+const Wohnsitzauflagechkb = document.querySelector("#Wohnsitzauflagechkb")
+const Fiktchkb = document.querySelector("#Fiktchkb")
+const FiktBestätigung = document.querySelector("#FiktBestätigung")
+const ErgebnisWohnsitzzulage = document.querySelector("#ErgebnisWohnsitzzulage")
 
+Wohnsitzauflagechkb.addEventListener("click", function(){
+  if(Wohnsitzauflagechkb.checked){
+    PrüfverlaufDritt.classList.add("d-none")
+    PrüfverlaufEU.classList.add("d-none")
+    ErgebnisWohnsitzzulage.classList.remove("d-none")
+  }else{
+  ErgebnisWohnsitzzulage.classList.add("d-none")
+  }
+})
+function HideFiktUndWohnsitzauflage(){
+  FiktUndWohnsitzauflage.classList.add("d-none")
+}
+function ShowFiktUndWohnsitzauflage(){
+  FiktUndWohnsitzauflage.classList.remove("d-none")
+}
+Fiktchkb.addEventListener("click", function(){
+  if(Fiktchkb.checked){
+    FiktBestätigung.classList.remove("d-none")
+  }else{
+    FiktBestätigung.classList.add("d-none")
+  }
+})
 
-// Toggle Visibily Fiktionsbescheinigung Unterpunkt
-const chboxTitel = document.querySelector("#bestaetigungTitel");
-document.querySelectorAll('input[type=radio][name="Fiktionsbescheinigung"]').forEach(function(radio) {
-    radio.addEventListener('change', function() {
-      if (this.value === 1) {
-        chboxTitel.classList.toggle("d-none");
-      } else {
-        chboxTitel.classList.toggle("d-none");
-    }
-    });
-  });
 
 const ausschlussTextBlock = document.querySelector("#ausschlussGruendeBlock");
 const btnAusschlussGruendeBlock = document.querySelector("#btnAusschlussGruendeBlock");
