@@ -17,6 +17,8 @@ const ErgebnisEU31 = document.querySelector("#ErgebnisEU31")
 const ErgebnisEU32 = document.querySelector("#ErgebnisEU32")
 const ErgebnisEU33 = document.querySelector("#ErgebnisEU33")
 
+const Ueberschrift = document.querySelector("#Ueberschrift")
+
 //Logik für EU Prüfung (2)
 function HideOtherRadios(radioSetToJa){
     PrüfEU2Rows.forEach(function(row){
@@ -46,6 +48,12 @@ PrüfEU2Radios.forEach(function(radio){
             PrüfEU32.classList.add("d-none")
             PrüfEU33.classList.add("d-none")
 
+            ErgebnisEU31.classList.add("d-none")
+            ErgebnisEU32.classList.add("d-none")
+            ErgebnisEU33.classList.add("d-none")
+
+            window.scrollBy(0, 500)  
+
         }else{
             ShowAllRadios();
             Ueberschrift.classList.add("d-none")
@@ -73,3 +81,58 @@ PrüfEU2chkb.addEventListener("click", function(){
 })
 
 //Logik für EU Prüfung (3.1)
+PrüfEU31Radios.forEach(function(radio){
+    radio.addEventListener("click", function(){
+        if(radio.value === "Ja"){
+            Ueberschrift.classList.remove("d-none")
+            ErgebnisEU31.classList.remove("d-none")
+            window.scrollBy(0, 500)  
+
+            PrüfEU32.classList.add("d-none")
+            PrüfEU33.classList.add("d-none")
+
+            ErgebnisEU32.classList.add("d-none")
+            ErgebnisEU33.classList.add("d-none")
+        }else{
+            Ueberschrift.classList.add("d-none")
+            ErgebnisEU31.classList.add("d-none")
+            PrüfEU32.classList.remove("d-none")
+            window.scrollBy(0, 500)  
+        }
+    })
+})
+
+//Logik für EU Prüfung (3.2)
+PrüfEU32Radios.forEach(function(radio){
+    radio.addEventListener("click", function(){
+        if(radio.value === "Ja"){
+            Ueberschrift.classList.remove("d-none")
+            ErgebnisEU32.classList.remove("d-none")
+            window.scrollBy(0, 500)  
+
+            PrüfEU33.classList.add("d-none")
+            ErgebnisEU33.classList.add("d-none")
+        }else{
+            Ueberschrift.classList.add("d-none")
+            ErgebnisEU32.classList.add("d-none")
+            PrüfEU33.classList.remove("d-none")
+        }
+    })
+})
+
+//Logik für EU Prüfung (3.3)
+PrüfEU33Radios.forEach(function(radio){
+    radio.addEventListener("click", function(){
+        if(radio.value === "Ja"){
+            Ueberschrift.classList.remove("d-none")
+            ErgebnisEU33.classList.remove("d-none")
+            ErgebnisEU2Nein.classList.remove("d-none")
+            window.scrollBy(0, 500)  
+
+            ErgebnisEU33Nein.classList.add("d-none")
+        }else{
+            Ueberschrift.classList.add("d-none")
+            ErgebnisEU33.classList.add("d-none")
+        }
+    })
+})

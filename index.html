@@ -1953,7 +1953,7 @@
 
 
 <!--Prüfverlauf EU-->
-    <div id="PrüfverlaufEU" class="">
+    <div id="PrüfverlaufEU" class=" d-none">
         <div class="mb-3">
             <div class="fs-4 mb-3">
             (2) Leistungsrechtliche Vorabprüfung (Ausnahmen Ausschlüsse § 7 Abs. 1 S. 2 Nr. 1, 2a/b SGB II)            </div>
@@ -2238,7 +2238,7 @@
             <button type="button" class="btn btn-primary d-none my-3" id="PrüfEU2btn">Auswahlmöglichkeiten zu (2) vollständig einblenden</button>
         </div>
 
-        <div id="PrüfEU31">
+        <div id="PrüfEU31" class="d-none">
             <div class="fs-4 mb-3">
                 (3.1) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1 SGB II (Dreimonatsausschluss) während der ersten drei Monate nach Einreise/Geburt:
             </div>
@@ -2251,7 +2251,7 @@
                         <label class="form-check-label me-5" for="PrüfEU31JaNein11">
                             Ja
                         </label>
-                        <input class="form-check-input" type="radio" name="PrüfEU31JaNein1" id="PrüfEU31JaNein12" value="Ja">
+                        <input class="form-check-input" type="radio" name="PrüfEU31JaNein1" id="PrüfEU31JaNein12" value="">
                         <label class="form-check-label" for="PrüfEU31JaNein12">
                             Nein
                         </label>
@@ -2260,7 +2260,7 @@
             </div>
         </div>
 
-        <div id="PrüfEU32">
+        <div id="PrüfEU32" class="d-none">
             <div class="fs-4 mb-3">
                 (3.2) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2b SGB II (Aufenthaltsrecht ergibt sich allein aus dem Zweck der Arbeitsuche) ab dem vierten Monat nach Einreise/Geburt:
             </div>
@@ -2273,7 +2273,7 @@
                         <label class="form-check-label me-5" for="PrüfEU32JaNein11">
                             Ja
                         </label>
-                        <input class="form-check-input" type="radio" name="PrüfEU32JaNein1" id="PrüfEU32JaNein12" value="Ja">
+                        <input class="form-check-input" type="radio" name="PrüfEU32JaNein1" id="PrüfEU32JaNein12" value="">
                         <label class="form-check-label" for="PrüfEU32JaNein12">
                             Nein
                         </label>
@@ -2282,7 +2282,7 @@
             </div>
         </div>
 
-        <div id="PrüfEU33">
+        <div id="PrüfEU33" class="d-none">
             <div class="fs-4 mb-3">
                 (3.3) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2a SGB II (kein Aufenthaltsrecht) ab dem vierten Monat nach Einreise/Geburt:
             </div>
@@ -2303,7 +2303,7 @@
                         <label class="form-check-label me-5" for="PrüfEU33JaNein11">
                             Ja
                         </label>
-                        <input class="form-check-input" type="radio" name="PrüfEU33JaNein1" id="PrüfEU33JaNein12" value="Ja">
+                        <input class="form-check-input" type="radio" name="PrüfEU33JaNein1" id="PrüfEU33JaNein12" value="">
                         <label class="form-check-label" for="PrüfEU33JaNein12">
                             Nein
                         </label>
@@ -2320,6 +2320,7 @@
             <div id="ErgebnisEU2" class="fw-bold d-none">
                 <div>
                     Es liegt keiner der Ausschlussgründe nach § 7 Abs. 1 S. 2 Nr. 1, 2a/b SGB II vor.
+                    (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 Nr. 2a AufenthG verpflichtend, wenn Leistungen nach fünfjährigem gewöhnlichen (ggf. nicht rechtmäßigen) Aufenthalt im Sinne von § 7 Abs. 1 S. 4 SGB II oder gem. Art. 10 EU-Verordnung Nr. 492/2011 beantragt/bewilligt werden; vgl. FW BA zu § 7 SGB II, Rz. 7.62, WDB-Eintrag Nr. 070095 zu § 7 SGB II)
                 </div>
                 <button class="btn btn btn-outline-success bootstrap-select text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBemEU1" aria-expanded="false" aria-controls="collapseExample">
                     Bemerkung (optional):
@@ -2363,7 +2364,7 @@
             </div>
             <div id="ErgebnisEU33" class="fw-bold d-none">
                 <div>
-                    Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2b SGB II (Aufenthaltsrecht allein zur Arbeitssuche)
+                    Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2a SGB II (kein Aufenthaltsrecht)
                     (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a AufenthG verpflichtend; vgl. FW BA zu § 7 SGB II, Rz. 7.62)
                 </div>
                 <button class="btn btn btn-outline-success bootstrap-select text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBemEU33" aria-expanded="false" aria-controls="collapseExample">
