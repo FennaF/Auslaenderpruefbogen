@@ -103,7 +103,7 @@
 
 <!--Allgemeine Vorabprüfung Dritt -->
     <div class="fs-4 ms-3">Allgemeine Vorabprüfung</div>
-    <div class="container mb-4" id="VorabDritt">
+    <div class="container" id="VorabDritt">
             <div class="form-check py-2">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler" onclick="UnterOpsFalseSetzen(); ShowPrüfDritt();HidePrüfEU()">
                 <label class="form-check-label" for="Drittstaatler">
@@ -226,11 +226,6 @@
                     <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
                 </label>
             </div>
-    </div>
-
-<!--Allgemeine Vorabprüfung EU-->
-    <div class="container" id="VorabEU">
-
     </div>
 
 <!--Prüfverlauf Dritt-->
@@ -2220,6 +2215,7 @@
             </div>
             <div class="row border border-dark ps-2">
                 Handelt es sich um sich um einen Familienangehörigen eines Deutschen, und der Familienangehörige besitzt keinen Aufenthaltstitel/-status, der nach § 1 Abs. 1 AsylbLG zum AsylbLG-Leistungsbezug (zumindest dem Grunde nach) berechtigt?
+                (Duldung/Aussetzung der Abschiebung; § 23 Abs. 1 wg. Krieges im Heimatland, § 24 wg. Krieges im Heimatland, § 25 Abs. 4 S. 1, § 25 Abs. 5 und vorherige Entscheidung der Ausländerbehörde über die Aussetzung der Abschiebung (= Duldung) liegt noch nicht mindestens 18 Monate zurück oder § 25 Abs. 5 wurde vor weniger als 18 Monaten erteilt ohne vorherige Duldung oder Gesamtzeitraum Duldung und Titel nach § 25 Abs. 5 AufenthG beträgt noch nicht 18 Monate), (vgl. FW BA zu § 7 SGB II, Rz. 7.54)
                 <div>
                     <input class="form-check-input" type="radio" name="PrüfEU2JaNein13" id="PrüfEU2JaNein131" value="Ja">
                     <label class="form-check-label me-5" for="PrüfEU2JaNein131">
@@ -2239,18 +2235,81 @@
                     </label>
                 </div>
             </div>
+            <button type="button" class="btn btn-primary d-none my-3" id="PrüfEU2btn">Auswahlmöglichkeiten zu (2) vollständig einblenden</button>
         </div>
 
         <div id="PrüfEU31">
-
+            <div class="fs-4 mb-3">
+                (3.1) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1 SGB II (Dreimonatsausschluss) während der ersten drei Monate nach Einreise/Geburt:
+            </div>
+            <div class="container mb-3">
+                <div class="row border border-dark ps-2">
+                    Erfolgte die Einreise in das/die Geburt im Bundesgebiet vor weniger als drei Monaten (gerechnet ab dem Datum, ab dem Leistungen begehrt werden)?
+                    (vgl. FW BA zu § 7 SGB II, Rzn. 7.8, 7.29)
+                    <div>
+                        <input class="form-check-input" type="radio" name="PrüfEU31JaNein1" id="PrüfEU31JaNein11" value="Ja">
+                        <label class="form-check-label me-5" for="PrüfEU31JaNein11">
+                            Ja
+                        </label>
+                        <input class="form-check-input" type="radio" name="PrüfEU31JaNein1" id="PrüfEU31JaNein12" value="Ja">
+                        <label class="form-check-label" for="PrüfEU31JaNein12">
+                            Nein
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="PrüfEU32">
-            
+            <div class="fs-4 mb-3">
+                (3.2) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2b SGB II (Aufenthaltsrecht ergibt sich allein aus dem Zweck der Arbeitsuche) ab dem vierten Monat nach Einreise/Geburt:
+            </div>
+            <div class="container mb-3">
+                <div class="row border border-dark ps-2">
+                    Erfüllt der Antragsteller die Voraussetzungen nach § 2 Abs. 2 Nr. 1a FreizügG/EU (bis zu sechs Monate nach Einreise ohne Nachweis, ab siebtem Monat mit Nachweis, dass Arbeit gesucht wird und begründete Aussicht besteht, eingestellt zu werden) und ist neben diesem Aufenthaltsrecht kein weiteres Aufenthaltsrecht nach § 2 Abs. 2 Nr. 1-7 FreizügG/EU erkennbar?
+                    (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 Nr. 2a AufenthG verpflichtend, vgl. FW BA zu § 7 SGB II, Rz. 7.62, sowie FW BA zu § 7 SGB II, Rzn. 7.9, 7.31, 7.32, 7.33)
+                    <div>
+                        <input class="form-check-input" type="radio" name="PrüfEU32JaNein1" id="PrüfEU32JaNein11" value="Ja">
+                        <label class="form-check-label me-5" for="PrüfEU32JaNein11">
+                            Ja
+                        </label>
+                        <input class="form-check-input" type="radio" name="PrüfEU32JaNein1" id="PrüfEU32JaNein12" value="Ja">
+                        <label class="form-check-label" for="PrüfEU32JaNein12">
+                            Nein
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="PrüfEU33">
-            
+            <div class="fs-4 mb-3">
+                (3.3) Prüfung Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2a SGB II (kein Aufenthaltsrecht) ab dem vierten Monat nach Einreise/Geburt:
+            </div>
+            <div class="container mb-3">
+                <div class="row border border-dark ps-2">
+                    <ul>
+                        <li>Es ist kein Aufenthaltsrecht nach § 2 Abs. 2 Nr. 1-7 FreizügG/EU erkennbar.</li>
+                           <div>und/oder</div> 
+                        <li>Seitens der Ausländerbehörde wurde auf Grundlage § 2 Abs. 7 FreizügG/EU das Nichtbestehen des Freizügigkeitsrechts nach § 2 Abs. 1 FreizügG/EU festgestellt (entsprechende Verfügung liegt vor).</li>
+                            <div>und/oder</div>
+                        <li>Seitens der Ausländerbehörde wurde auf Grundlage § 5 Abs. 4 oder § 6 FreizügG/EU das Freizügigkeitsrecht nach § 2 Abs. 1 FreizügG/EU entzogen (entsprechende Verfügung liegt vor).</li>
+                            <div>und/oder</div>
+                        <li>Es ergibt sich kein Aufenthaltsrecht aus Art. 10 EU-Verordnung Nr. 492/2011 (Aufenthaltsrecht unmittelbar oder abgeleitet von Kindern, die der Schulpflicht nachkommen bzw. eine Berufsausbildung absolvieren bei gleichzeitiger elterlicher Sorge für diese und aktueller/beendeter abhängiger Erwerbstätigkeit mind. eines Elternteils (mit/ohne Aufenthaltsrecht zur Arbeitssuche nach § 2 Abs. 2 Nr. 1b FreizügG/EU); bei „Alt-Briten“ auch bei aktueller/beendeter Selbstständigkeit).
+                            (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 Nr. 2a AufenthG verpflichtend, vgl. FW BA zu § 7 SGB II, Rz. 7.62, sowie FW BA zu § 7 SGB II, Rzn. 7.8a, 7.30a, WDB-Eintrag Nr. 070095 zu § 7 SGB II) </li>
+                    </ul>
+                    <div>
+                        <input class="form-check-input" type="radio" name="PrüfEU33JaNein1" id="PrüfEU33JaNein11" value="Ja">
+                        <label class="form-check-label me-5" for="PrüfEU33JaNein11">
+                            Ja
+                        </label>
+                        <input class="form-check-input" type="radio" name="PrüfEU33JaNein1" id="PrüfEU33JaNein12" value="Ja">
+                        <label class="form-check-label" for="PrüfEU33JaNein12">
+                            Nein
+                        </label>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Ergebnisse EU-->
@@ -2269,7 +2328,51 @@
                     </div>
                 </div>
             </div>
-
+            <div id="ErgebnisEU31" class="fw-bold d-none">
+                <div>
+                    Ausschluss nach § 7 Abs. 1 S. 2 Nr. 1 SGB II (Dreimonatsausschluss)
+                    (keine Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a AufenthG; vgl. FW BA zu § 7 SGB II, Rz. 7.62)
+                </div>
+                <button class="btn btn btn-outline-success bootstrap-select text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBemEU3" aria-expanded="false" aria-controls="collapseExample">
+                    Bemerkung (optional):
+                 </button>
+                <div class="showOnPrint">Bemerkung (optional):</div>
+                <div class="collapse" id="collapseBemEU3">
+                    <div class="mb-3">
+                        <textarea class="form-control border-dark" id="" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="ErgebnisEU32" class="fw-bold d-none">
+                <div>
+                    Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2a SGB II (kein Aufenthaltsrecht)
+                    (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a AufenthG verpflichtend; vgl. FW BA zu § 7 SGB II, Rz. 7.62)
+                </div>
+                <button class="btn btn btn-outline-success bootstrap-select text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBemEU32" aria-expanded="false" aria-controls="collapseExample">
+                    Bemerkung (optional):
+                 </button>
+                <div class="showOnPrint">Bemerkung (optional):</div>
+                <div class="collapse" id="collapseBemEU32">
+                    <div class="mb-3">
+                        <textarea class="form-control border-dark" id="" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="ErgebnisEU33" class="fw-bold d-none">
+                <div>
+                    Ausschluss nach § 7 Abs. 1 S. 2 Nr. 2b SGB II (Aufenthaltsrecht allein zur Arbeitssuche)
+                    (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a AufenthG verpflichtend; vgl. FW BA zu § 7 SGB II, Rz. 7.62)
+                </div>
+                <button class="btn btn btn-outline-success bootstrap-select text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBemEU33" aria-expanded="false" aria-controls="collapseExample">
+                    Bemerkung (optional):
+                 </button>
+                <div class="showOnPrint">Bemerkung (optional):</div>
+                <div class="collapse" id="collapseBemEU33">
+                    <div class="mb-3">
+                        <textarea class="form-control border-dark" id="" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
