@@ -2,7 +2,57 @@
 const currentDate = new Date();
 document.querySelector("#Datum").innerHTML = currentDate.toLocaleDateString();
 
-//Bildschirm nach oben scrollen, damit die neu eingeblendeten Inhalte deutlisch erkennbar werden
+//Hinzufügen eines weiteren Kunden 
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const weiterePersonÜberschrift = document.querySelector("#weiterePersonÜberschrift")
+
+const alert = () => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-dismissible my-0 py-0" role="">`,
+    `  <div class="row my-0">
+        <div class="col ps-3">
+            <input type="text" class="form-control bootstrap-select print-only border-bottom mb-0" id="KdName" placeholder="">
+            <label for="KdName" class="col-auto pe-0 fst-italic">Name</label>
+        </div>
+        <div class="col ps-0">
+            <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="KdVorname" placeholder="">
+            <label for="KdVorname" class="col-auto pe-0 fst-italic">Vorname</label>
+        </div>
+      </div>
+    <div class="row my-0">
+        <div class="col ps-3">
+            <input type="text" class="form-control bootstrap-select print-only border-bottom" id="KdNr" placeholder="">
+            <label for="KdNr" class="col-auto pe-0 fst-italic">Kunden-Nr.</label>
+        </div>
+        <div class="col ps-0">
+            <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="BDay" placeholder="">
+            <label for="BDay" class="col-auto pe-0 fst-italic">Geburtsdatum</label>
+        </div>
+    </div>
+    <div class="row my-0">
+        <div class="col ps-3">
+            <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="staatsang" placeholder="">
+            <label for="staatsang" class="col-auto pe-0 fst-italic">Staatsangehörigkeit</label>
+        </div>
+        <div class="col ps-0">
+            <input type="text" class="form-control bootstrap-select pe-0 print-only border-bottom" id="TitelStatus" placeholder="">
+            <label for="TitelStatus" class="col-auto pe-0 fst-italic">Aufenthaltstitel/-status nach AufenthG/FreizügG/EU</label>
+        </div>
+    </div>`,
+    '<button type="button" class="btn-close my-0" data-bs-dismiss="alert" aria-label="Close"></button>',
+  '</div>'
+  ].join('')
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert()
+  })
+  weiterePersonÜberschrift.classList.remove("d-none")
+}
 
 
 //Toggle Visibility of Prüfverlauf Dritt und EU je nachdem was in der Vorauswahl ausgewählt wurde, Funktionen in onclick atrribute in index.html eingefügt
