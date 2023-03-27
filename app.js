@@ -63,6 +63,7 @@ function ShowPrüfDritt(){
   PrüfverlaufDritt.classList.remove("d-none")
   ShowFiktUndWohnsitzauflage()
   window.scrollBy(0, 500)
+  WrapperDiv.classList.remove("d-none")
 }
 function HidePrüfDritt(){
   PrüfverlaufDritt.classList.add("d-none")
@@ -71,6 +72,7 @@ function ShowPrüfEU(){
   PrüfverlaufEU.classList.remove("d-none")
   HideFiktUndWohnsitzauflage()
   window.scrollBy(0, 500)
+  WrapperDiv.classList.add("d-none")
 }
 function HidePrüfEU(){
   PrüfverlaufEU.classList.add("d-none")
@@ -127,6 +129,7 @@ function UnterOpsFalseSetzen(){
 }
 
 //Chekcboxen für Fiktionsbescheinigung und Wohnsitzauflage werden nur angezeigt, wenn durch die Allgemeine Vorabprüfung der Prüfverlauf Dritt eingeblendet wird
+const WrapperDiv = document.querySelector("#FiktWohnsitzauflage")
 const FiktUndWohnsitzauflage = document.querySelector("#FiktUndWohnsitzauflage")
 const Wohnsitzauflagechkb = document.querySelector("#Wohnsitzauflagechkb")
 const Fiktchkb = document.querySelector("#Fiktchkb")
@@ -172,6 +175,8 @@ const Ergebnis223 = document.querySelector("#ErgebnisDritt223")
 const Ergebnis224 = document.querySelector("#ErgebnisDritt224")
 const Ergebnis225 = document.querySelector("#ErgebnisDritt225")
 const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
+const Wiedervolage = document.querySelector("#Wiedervolage")
+
   //Prüfung 1
     //Ausblenden Textblöcke unter (1), wenn Auswahl in paragraphen Liste
     document.querySelectorAll('#paragrListe input[type=radio]').forEach(function(radio) {
@@ -193,7 +198,8 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             /**Endergebnis einblenden + übrigen Ergebnisse ausblenden */
             ErgebnisÜberschirft.classList.remove("d-none")
             Ergebnis11.classList.remove("d-none")
-
+            Wiedervolage.classList.remove("d-none")
+            window.scrollBy(0, 500)
             Ergebnis12.classList.add("d-none")
             Ergebnis221.classList.add("d-none")
             Ergebnis222.classList.add("d-none")
@@ -212,6 +218,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
         ErgebnisÜberschirft.classList.add("d-none")
         Ergebnis11.classList.add("d-none")
+        Wiedervolage.classList.add("d-none")
 
         this.classList.add("d-none");
       });
@@ -237,6 +244,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
           /**Endergebnis einblenden + übrigen Ergebnisse ausblenden*/
           ErgebnisÜberschirft.classList.remove("d-none")
           Ergebnis11.classList.remove("d-none")
+          Wiedervolage.classList.remove("d-none")
 
           Ergebnis12.classList.add("d-none")
           Ergebnis221.classList.add("d-none")
@@ -252,6 +260,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
           ErgebnisÜberschirft.classList.add("d-none")
           Ergebnis11.classList.add("d-none")
+          Wiedervolage.classList.add("d-none")
 
           window.scrollBy(0, 500)
         }
@@ -298,6 +307,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
           /**Endergebnis einblenden */
           ErgebnisÜberschirft.classList.remove("d-none")
           Ergebnis12.classList.remove("d-none")
+          Wiedervolage.classList.remove("d-none")
 
           Ergebnis11.classList.add("d-none")
           Ergebnis221.classList.add("d-none")
@@ -314,6 +324,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
           ErgebnisÜberschirft.classList.add("d-none")
           Ergebnis12.classList.add("d-none")
+          Wiedervolage.classList.add("d-none")
 
           window.scrollBy(0, 500)
         }
@@ -341,7 +352,8 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             showTextblöcke12();
             ErgebnisÜberschirft.classList.add("d-none")
             Ergebnis12.classList.add("d-none")
-            this.classList.add("d-none");
+            Wiedervolage.classList.add("d-none")
+            this.classList.add("d-none")
           });
 
 
@@ -364,6 +376,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
 
               ErgebnisÜberschirft.classList.remove("d-none")
               Ergebnis11.classList.remove("d-none")
+              Wiedervolage.classList.remove("d-none")
 
               Ergebnis12.classList.add("d-none")
               Ergebnis221.classList.add("d-none")
@@ -376,6 +389,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               showTextBlöcke21();
               ErgebnisÜberschirft.classList.add("d-none")
               Ergebnis11.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
             };
           });
         });
@@ -409,6 +423,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
                     showTextBlöcke21();
                     ErgebnisÜberschirft.classList.add("d-none")
                     Ergebnis11.classList.add("d-none")
+                    Wiedervolage.classList.add("d-none")
                     document.querySelector("#PrüfverlaufDritt21chkb").classList.remove("d-none");
                     this.classList.add("d-none");
                   });
@@ -492,12 +507,14 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             Ergebnis224.classList.add("d-none")
             Ergebnis225.classList.add("d-none")
             Ergebnis226.classList.add("d-none")
+            Wiedervolage.classList.remove("d-none")
 
           }else{
             PrüfverlaufDritt221BlockA.classList.remove("d-none")
             BlockBRowsShow();
             ErgebnisÜberschirft.classList.add("d-none")
             Ergebnis221.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
 
             btnEinblenden221.classList.add("d-none");
             PrüfverlaufDritt222.classList.add("d-none");
@@ -556,6 +573,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             Ergebnis224.classList.add("d-none")
             Ergebnis225.classList.add("d-none")
             Ergebnis226.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
 
           this.classList.add("d-none")
         })
@@ -568,6 +586,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               //Endgergebnis einblenden
             //Endergebnis einblenden + übrigen Ergebnisse ausblenden
             ErgebnisÜberschirft.classList.remove("d-none")
+            Wiedervolage.classList.remove("d-none")
             Ergebnis11.classList.add("d-none")
             Ergebnis12.classList.add("d-none")
             Ergebnis221.classList.add("d-none")
@@ -586,6 +605,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               PrüfverlaufDritt223.classList.remove("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
               Ergebnis222.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
               window.scrollBy(0, 500)
             }
           })
@@ -608,6 +628,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               PrüfverlaufDritt226.classList.add("d-none")
             //Endergebnis einblenden + übrigen Ergebnisse ausblenden
             ErgebnisÜberschirft.classList.remove("d-none")
+            Wiedervolage.classList.remove("d-none")
             Ergebnis11.classList.add("d-none")
             Ergebnis12.classList.add("d-none")
             Ergebnis221.classList.add("d-none")
@@ -622,6 +643,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt223Btn.classList.add("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
               Ergebnis223.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
             }
           })
         })
@@ -655,6 +677,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             Ergebnis224.classList.add("d-none")
             Ergebnis225.classList.add("d-none")
             Ergebnis226.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
           this.classList.add("d-none")
         })
 
@@ -682,6 +705,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt224Hide(this)
               Dritt224Btn.classList.remove("d-none")
               Dritt224chkb.checked = false
+              Wiedervolage.classList.remove("d-none")
 
               PrüfverlaufDritt225.classList.add("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
@@ -701,6 +725,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt224Btn.classList.add("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
               Ergebnis224.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
             }
           })
         })
@@ -727,6 +752,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
           this.classList.add("d-none")
           ErgebnisÜberschirft.classList.add("d-none")
           Ergebnis224.classList.add("d-none")
+          Wiedervolage.classList.add("d-none")
         })
 
         Dritt224chkb.addEventListener("click", function(){
@@ -754,6 +780,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt225Btn.classList.remove("d-none")
               Dritt225chkb.checked = false
 
+              Wiedervolage.classList.remove("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
             //Endergebnis einblenden + übrigen Ergebnisse ausblenden
             ErgebnisÜberschirft.classList.remove("d-none")
@@ -771,6 +798,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt225Btn.classList.add("d-none")
               Ergebnis225.classList.add("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
             }
           })
         })
@@ -797,6 +825,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
           this.classList.add("d-none")
           Ergebnis225.classList.add("d-none")
           ErgebnisÜberschirft.classList.add("d-none")
+          Wiedervolage.classList.add("d-none")
         })
 
         Dritt225chkb.addEventListener("click", function(){
@@ -822,6 +851,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
             if(radio.value === "Ja"){
               Dritt226Hide(this)
               Dritt226Btn.classList.remove("d-none")
+              Wiedervolage.classList.remove("d-none")
               Dritt226chkb.checked = false
             //Endergebnis einblenden + übrigen Ergebnisse ausblenden
             ErgebnisÜberschirft.classList.remove("d-none")
@@ -839,6 +869,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
               Dritt226Btn.classList.add("d-none")
               Ergebnis226.classList.add("d-none")
               ErgebnisÜberschirft.classList.add("d-none")
+              Wiedervolage.classList.add("d-none")
 
             }
           })
@@ -866,6 +897,7 @@ const Ergebnis226 = document.querySelector("#ErgebnisDritt226")
           this.classList.add("d-none")
           Ergebnis226.classList.add("d-none")
           ErgebnisÜberschirft.add("d-none")
+          Wiedervolage.classList.add("d-none")
         })
 
         Dritt226chkb.addEventListener("click", function(){

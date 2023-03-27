@@ -28,13 +28,13 @@
                         <option value="3">U25</option>
                     </select>
                 </div>
-                <div class="col-2" id="Datum">
-                    <!--datum wir mit js eingefuegt  -->
+                <div class="col-5 text-end fw-bold" id="Datum">
+                    <!--datum wir mit app.js eingefuegt  -->
                 </div>
             </div>
             <div class="row mt-0">
-                <label for="Team" class="col-auto pe-0">Team</label>
-                <div class="col-2 ps-1">
+                <label for="Team" class="col-auto pe-0">Team, Mitarbeiter</label>
+                <div class="col-5 ps-1">
                   <input type="text" class="form-control bootstrap-select print-only" id="Team" placeholder="">
                 </div>
                 <label for="BGNr" class="col-auto pe-0">BG-Nr.: 35702//</label>
@@ -77,9 +77,11 @@
             </div>
          </div>
     </div>
-    <div id="weiterePersonÜberschrift" class="ms-3 mt-2 fw-bold">Weitere Personen in BG mit i-d-e-n-t-i-s-c-h-e-m Aufenthaltsstatus</div>
+    <div id="weiterePersonÜberschrift" class="ms-3 mt-2 fw-bold">Weitere Personen in BG mit i-d-e-n-t-i-s-c-h-e-m Aufenthaltsstatus
+        <button type="button" class="btn btn-outline-primary ms-3" id="liveAlertBtn">Einfügen</button>
+    </div>
     <div id="liveAlertPlaceholder"></div>
-    <button type="button" class="btn btn-outline-primary ms-3" id="liveAlertBtn">Weitere Personen in BG mit i-d-e-n-t-i-s-c-h-e-m Aufenthaltsstatus einfügen</button>
+    
 
 <!--Überschrift-->
     <div class="mx-2 my-3 border-top border-dark"></div>
@@ -200,8 +202,8 @@
             </div>
     </div>
 
+    <div id="FiktWohnsitzauflage" class="d-none">
     <div id="orangeBalken" style="height: 10px;" class="bg-warning bg-opacity-50 mb-3"></div>
-
     <div id="FiktUndWohnsitzauflage" class="container d-none">
             <div class="form-check">
                 <input class= "form-check-input" type="checkbox" id="Fiktchkb">
@@ -225,8 +227,8 @@
                 </label>
             </div>
     </div>
-
     <div id="orangeBalken" style="height: 10px;" class="bg-warning bg-opacity-50 mb-3"></div>
+    </div>
 
 <!--Prüfverlauf Dritt-->
     <div id="PrüfverlaufDritt" class="d-none">
@@ -814,7 +816,7 @@
                         </label>
                     </div>
                     <div class="col-3 mt-3 mx-4 text-center">
-                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein1" id="PrüfverlaufDritt21JaNein51" value="Ja">
+                        <input class="form-check-input" type="radio" name="PrüfverlaufDritt21JaNein5" id="PrüfverlaufDritt21JaNein51" value="Ja">
                         <label class="form-check-label" for="PrüfverlaufDritt21JaNein51">
                             Ja
                         </label>
@@ -2394,7 +2396,7 @@
         </div>
     </div>
 
-    <div id="Wiedervolage fs-5" class="mb-3">
+    <div id="Wiedervolage" class="mb-3 d-none">
         <div class="fw-bold">
             Wiedervorlage
         </div>
@@ -2407,6 +2409,8 @@
             zum
         </label>
         <input type="date" id="start" name="trip-start" value="" min="2023-04-01" max="2035-12-31">
+
+        
 
     </div>
     <script src="js/bootstrap.js"></script>
