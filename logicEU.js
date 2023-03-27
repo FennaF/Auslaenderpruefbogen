@@ -17,8 +17,13 @@ const ErgebnisEU31 = document.querySelector("#ErgebnisEU31")
 const ErgebnisEU32 = document.querySelector("#ErgebnisEU32")
 const ErgebnisEU33 = document.querySelector("#ErgebnisEU33")
 
+const Druckbtn = document.querySelector("#Drucken")
+
 const Ueberschrift = document.querySelector("#Ueberschrift")
 
+Druckbtn.addEventListener("click", function(){
+    window.print()
+})
 //Logik für EU Prüfung (2)
 function HideOtherRadios(radioSetToJa){
     PrüfEU2Rows.forEach(function(row){
