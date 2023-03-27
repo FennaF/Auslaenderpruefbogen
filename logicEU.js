@@ -47,6 +47,7 @@ PrüfEU2Radios.forEach(function(radio){
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU2.classList.remove("d-none")
             PrüfEU2Btn.classList.remove("d-none")
+            Wiedervolage.classList.remove("d-none")
             PrüfEU2chkb.checked = false
 
             PrüfEU31.classList.add("d-none")
@@ -63,6 +64,7 @@ PrüfEU2Radios.forEach(function(radio){
             ShowAllRadios();
             Ueberschrift.classList.add("d-none")
             ErgebnisEU2.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
             PrüfEU2Btn.classList.add("d-none")
         }
     })
@@ -71,6 +73,7 @@ PrüfEU2Btn.addEventListener("click",function(){
     ShowAllRadios()
     Ueberschrift.classList.add("d-none")
     ErgebnisEU2.classList.add("d-none")
+    Wiedervolage.classList.add("d-none")
     PrüfEU2Btn.classList.add("d-none")
 })
 PrüfEU2chkb.addEventListener("click", function(){
@@ -91,6 +94,7 @@ PrüfEU31Radios.forEach(function(radio){
         if(radio.value === "Ja"){
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU31.classList.remove("d-none")
+            Wiedervolage.classList.remove("d-none")
             window.scrollBy(0, 500)  
 
             PrüfEU32.classList.add("d-none")
@@ -102,6 +106,7 @@ PrüfEU31Radios.forEach(function(radio){
         }else{
             Ueberschrift.classList.add("d-none")
             ErgebnisEU31.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
             PrüfEU32.classList.remove("d-none")
             window.scrollBy(0, 500)  
         }
@@ -114,6 +119,7 @@ PrüfEU32Radios.forEach(function(radio){
         if(radio.value === "Ja"){
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU32.classList.remove("d-none")
+            Wiedervolage.classList.remove("d-none")
             window.scrollBy(0, 500)  
 
             ErgebnisEU2.classList.add("d-none")
@@ -122,6 +128,7 @@ PrüfEU32Radios.forEach(function(radio){
         }else{
             Ueberschrift.classList.add("d-none")
             ErgebnisEU32.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
             PrüfEU33.classList.remove("d-none")
         }
     })
@@ -134,6 +141,7 @@ PrüfEU33Radios.forEach(function(radio){
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU33.classList.remove("d-none")
             ErgebnisEU2.classList.add("d-none")
+            Wiedervolage.classList.remove("d-none")
             window.scrollBy(0, 500)  
 
             ErgebnisEU33Nein.classList.add("d-none")
@@ -141,6 +149,7 @@ PrüfEU33Radios.forEach(function(radio){
             ErgebnisEU2.classList.remove("d-none")
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU33.classList.add("d-none")
+            Wiedervolage.classList.add("d-none")
             window.scrollBy(0, 500) 
         }
     })
