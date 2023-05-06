@@ -86,23 +86,18 @@
 <!--Überschrift-->
     <div class="mx-2 my-3 border-top border-dark"></div>
     <div class="container">
-        <h1 class="align-baseline fs-3">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
+        <h1 class="align-baseline fs-4 fw-bold">Aktenverfügung SGB II-Leistungsausschlüsse bei Ausländern</h1>
+        <h2 class="fs-4 text-center">- Gesamtprüfung -</h2>
     </div>
-    <div class="mx-2 my-3 border-top border-dark"></div>
 
-    <!--Bearbeitungshinweis  -->
-    <div class="container mb-3 fs-6">
-        <div class="row alert alert-warning p-0 m-0" role="alert">
-            Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für jede ausländische Person in der BG separat durchzuführen, soweit deren Aufenthaltsstatus nach FreizügG/EU unterschiedlich zu der hier geprüften Person ist.  
-        </div>  
-        <p class="fst-italic m-0 text-muted" id="VerweisFachlWeisungen">
-            Ergänzende/vertiefende Informationen zur Prüfung von SGB II-Leistungsansprüchen bzw. von SGB II-Ausschlusstatbeständen bei Ausländern stehen in den Fachlichen Weisungen, in der Wissensdatenbank der BA zu den §§ 7, 8 SGB II, dem BA-Intranet sowie im Jobcenter-Intranet in der Datenbank Recht (Suchbegriff „Ausländer“) und über den "Schnellfinder" auf der FU-Seite zur Verfügung.
-        </p>          
-    </div>
-    <div class="mx-2 my-3 border-top border-dark"></div>
+    
 
 <!--Allgemeine Vorabprüfung Dritt -->
-    <h2 class="fs-4 ms-3">Allgemeine Vorabprüfung</h2>
+    <h2 class="fs-5 fw-bold ms-3">Voraussetzungsprüfung</h2>
+    <div class="orangeColor fst-italic container">
+        (bzgl. gewöhnlichen Aufenthalts im Bundesgebiet, vgl. § 7 Abs. 1 S. 1 Nr. 4 SGB II u. FW BA zu § 7
+        SGB II, Rzn. 7.2, 7.3, 7.6, 7.27, 7.40, Anlage 4)
+    </div>
     <div class="container" id="VorabDritt">
             <div class="form-check py-2">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Drittstaatler" onclick="UnterOpsFalseSetzen(); ShowPrüfDritt();HidePrüfEU()">
@@ -140,7 +135,7 @@
             <div class="form-check py-2">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="EWR-Staatler" onclick="toggleUnterOp2()">
                 <label class="form-check-label" for="EWR-Staatler">
-                    <b>EWR-Staatler</b>
+                    <b>EWR-Staatler  (Island/Liechtenstein/Norwegen)</b>
                 </label>
                 <div class="form-check d-none" id="UnterOp2">
                     <div>
@@ -161,7 +156,7 @@
             <div class="form-check py-2">
                 <input class="form-check-input" type="radio" name="Staatseinordnung" id="Alt-Brite" onclick="toggleUnterOp3()">
                 <label class="form-check-label" for="Alt-Brite">
-                    <b>Alt-Brite</b>
+                    <b>Alt-Brite (Stichtag: 31.12.2020)</b>
                 </label>
                 <div class="form-check d-none" id="UnterOp3">
                     <div>
@@ -201,13 +196,9 @@
                 </div>
             </div>
     </div>
-    <div class="orangeColor fst-italic container">
-        (bzgl. gewöhnlichen Aufenthalts im Bundesgebiet, vgl. § 7 Abs. 1 S. 1 Nr. 4 SGB II u. FW BA zu § 7
-        SGB II, Rzn. 7.2, 7.3, 7.6, 7.27, 7.40, Anlage 4)
-    </div>
 
     <div id="FiktWohnsitzauflage" class="d-none">
-    <div id="orangeBalken" style="height: 10px;" class="bg-warning bg-opacity-50 mb-3"></div>
+    <div class="mx-2 my-3 border-top border-dark"></div>
     <div id="FiktUndWohnsitzauflage" class="container d-none">
             <div class="form-check">
                 <input class= "form-check-input" type="checkbox" id="Fiktchkb">
@@ -219,20 +210,32 @@
                     <input class="form-check-input" type="checkbox" value="" id="FiktBestätigungchkb">
                     <label class="form-check-label" for="FiktBestätigungchkb">
                         Es wird bestätigt, dass der der FB zugrunde liegende Titel ebenfalls vorliegt (Nur bei Vorliegen des zugehörigen Titels ist eine weitere Bearbeitung möglich!)
-                        <span class="orangeColor fst-italic">(vgl. FW BA zu § 7 SGB II, Rz. 7.41 (3))</span>
+                        <span class="orangeColor fst-italic">(Nur bei Vorliegen des zugehörigen Titels ist eine weitere Bearbeitung möglich!) (vgl. FW
+                            BA zu § 7 SGB II, Rz. 7.41 (3))</span>
                     </label>
                 </div>
-
+            <div class="cancelContainerPadding my-3 border-top border-dark"></div>
             <div class="form-check">
                 <input class= "form-check-input" type="checkbox" id="Wohnsitzauflagechkb">
                 <label class="form-check-label" for="Wohnsitzauflagechkb">
-                    Es liegt eine Wohnsitzauflage nach § 12a AufenthG vor, die zur Unzuständigkeit des JC Köln führt
+                    Es liegt <b>eine Wohnsitzauflage nach § 12a AufenthG</b> vor, die zur Unzuständigkeit des JC Köln führt
                     <span class="orangeColor fst-italic">(vgl. § 36 Abs. 2 SGB II u. FW BA zu § 36 SGB II, Rzn. 36.13, 36.14)</span>
                 </label>
             </div>
     </div>
-    <div id="orangeBalken" style="height: 10px;" class="bg-warning bg-opacity-50 mb-3"></div>
+    <div class="mx-2 my-3 border-top border-dark"></div>
     </div>
+
+    <!--Bearbeitungshinweis  -->
+    <div class="container mb-3 fs-6">
+        <div class=" fw-bold p-0 m-0" role="alert">
+            Die Sonderprüfung SGB II-Leistungsausschlüsse bei Ausländern ist für <u>jede</u> ausländische Person in der BG <u>separat</u> durchzuführen, soweit deren Aufenthaltsstatus nach <a href="https://www.gesetze-im-internet.de/aufenthg_2004/AufenthG.pdf" target="_blank">AufenthG</a> bzw. <a href="https://www.gesetze-im-internet.de/freiz_gg_eu_2004/Freiz%C3%BCgG_EU.pdf" target="_blank">FreizügG/EU</a> unterschiedlich zu Person (1) ist.
+        </div>  
+        <p class="fst-italic m-0 " id="VerweisFachlWeisungen">
+            Ergänzende/vertiefende Informationen zur Prüfung von SGB II-Leistungsansprüchen bzw. von SGB II-Ausschlusstatbeständen bei Ausländern stehen in den <a href="https://www.baintranet.de/001/007/Seiten/SGB-II-Hinweise.aspx" target="_blank">Fachlichen Weisungen der BA</a>, in der Wissensdatenbank der BA zu den <b>§§ 7, 8 SGB II</b>, in der <a href="https://www.arbeitsagentur.de/wissensdatenbank-sgbii" target="_blank">BA-Wissensdatenbank</a>, dem <a href="https://www.baintranet.de/011/005/008/009/Documents/Information-202109003-Anlage.pdf" target="_blank">BA-Praxishandbuch „Leistungsansprüche von ausländischen Staatsangehörigen nach dem SGB II“</a>, dem <b>BA-Intranet</b> sowie im Jobcenter-Intranet in der <a href="https://intranet.jobcenterkoeln.de/site/dbrecht/?searchcontrol%5Bsubmit%5D=1&searchdata%5Bsuchbegriff%5D=Ausl%C3%A4nder&searchdata%5Banliegen_kategorien_dummy%5D=&searchdata%5Bgesetze%5D=0" target="_blank">Datenbank Recht</a> (Suchbegriff „Ausländer“) und über den <a href="https://intranet.jobcenterkoeln.de/site/dbrecht/?searchcontrol%5Bsubmit%5D=1&searchdata%5Bsuchbegriff%5D=Ausl%C3%A4nder&searchdata%5Banliegen_kategorien_dummy%5D=&searchdata%5Bgesetze%5D=0" target="_blank">„Schnellfinder“</a> <b>auf der FU-Seite</b> zur Verfügung.
+        </p>          
+    </div>
+    <div class="mx-2 my-3 border-top border-dark"></div>
 
 <!--Prüfverlauf Dritt-->
     <div id="PrüfverlaufDritt" class="d-none">
@@ -1941,7 +1944,6 @@
 
             <div class="container ps-0 d-none mb-5" id="ErgebnisDritt225">
                 <div class="row mb-2 ms-0">
-                    Es liegt einer der ausländerspezifischen SGB II-Ausschlussgründe vor, und zwar nach:
                     Es liegt keiner der ausländerspezifischen SGB II-Ausschlussgründe nach § 7 Abs. 1 S. 2 Nr. 1-
                     3 bzw. § 8 Abs. 2 vor.
                     <span class="fst-italic orangeColor">(Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a bzw. S. 3 AufenthG prüfen; vgl. FW BA zu §
@@ -2420,8 +2422,8 @@
             Prüfergebnis
         </div>
         <div class="container ps-0 mb-5" id="ErgebnisDritt226">
-            <div class="row mb-2 ms-0">
-                Ausschluss nach § 7 Abs. 1 S. 1 Nr. 4 SGB II (kein gewöhnlicher Aufenthalt im Bundesgebiet)
+            <div class="row fw-bold mb-2 ms-0">
+                Keine Zuständigkeit JC Köln – Ende der Bearbeitung/keine Bescheidung. Weiterleitung Antrag gem. § 16 Abs. 2 SGB I an zuständigen Leistungsträger prüfen.
             </div>
         </div>
     </div>
