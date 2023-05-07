@@ -41,3 +41,11 @@ input[type="checkbox"]{
   margin-right: 0px;
 }
 
+.blueBackground{
+  background-color: rgb(184,204,228);
+}
+
+.greenBackground{
+  background-color: rgb(194,214,155);
+}
+
