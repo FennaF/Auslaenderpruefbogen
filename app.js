@@ -601,15 +601,25 @@ const Wiedervolage = document.querySelector("#Wiedervolage")
               PrüfverlaufDritt225.classList.add("d-none")
               PrüfverlaufDritt226.classList.add("d-none")
               window.scrollBy(0, 500)
-            }else{
-              PrüfverlaufDritt223.classList.remove("d-none")
-              ErgebnisÜberschirft.classList.add("d-none")
-              Ergebnis222.classList.add("d-none")
-              Wiedervolage.classList.add("d-none")
-              window.scrollBy(0, 500)
             }
           })
         })
+
+            const checkbox222 = document.querySelector("#Dritt222chk")
+              checkbox222.addEventListener("click", function(){
+                if(checkbox222.checked){
+                  document.querySelectorAll("#PrüfverlaufDritt222 input[type=radio]").forEach(function(radio){
+                    if(radio.value === ""){
+                      radio.checked = true
+                    }
+                 })
+                PrüfverlaufDritt223.classList.remove("d-none");
+                ErgebnisÜberschirft.classList.add("d-none")
+                Ergebnis222.classList.add("d-none")
+                Wiedervolage.classList.add("d-none")
+                window.scrollBy(0, 500)
+                }
+              })
 
         //Prüfung 223
         const Dritt223Rows = document.querySelectorAll("#Dritt223 .row")
