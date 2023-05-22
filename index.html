@@ -1774,13 +1774,11 @@
                         <label class="form-check-label me-5" for="Dritt226JaNein11">
                             Ja
                         </label>
-                    </div>
-                    <div class="col-3 mt-3 text-center">
                         <input class="form-check-input" type="radio" name="Dritt226JaNein1" id="Dritt226JaNein12" value="">
                         <label class="form-check-label" for="Dritt226JaNein12">
                             Nein
-                        </label>
-                    </div> 
+                        </label> 
+                    </div>
                 </div>
                 <div class="row py-3 border border-dark">
                     <div class="form-check">
@@ -1795,13 +1793,11 @@
                         <label class="form-check-label me-5" for="Dritt226JaNein21">
                             Ja
                         </label>
-                    </div>
-                    <div class="col-3 mt-3 text-center">
                         <input class="form-check-input" type="radio" name="Dritt226JaNein2" id="Dritt226JaNein22" value="">
                         <label class="form-check-label" for="Dritt226JaNein22">
                             Nein
-                        </label>
-                    </div> 
+                        </label> 
+                    </div>
                 </div>
                 <div class="row py-3 ps-2 border border-dark">
                     <div class="form-check">
@@ -1955,9 +1951,19 @@
                 </div>
             </div>
 
-            <div id="Wiedervorl" class="container fs-4 bg-success bg-opacity-50 my-3 d-none">
-                <div class="row">
-                    Wiedervorlage
+            <div class="mb-3">
+                <div class="fs-5 fw-bold">Hinweis außerhalb der leistungsrechtlichen Prüfung:</div>
+                <div class="fw-bold">Bei BG-Neuaufnahme/Änderung Aufenthaltsstatus/Vollendung des 15. Lebensjahres:</div>
+                <div>Wurde die zuständige Integrationsfachkraft entsprechend informiert?</div>
+                <div class="">
+                    <input class="form-check-input" type="radio" name="HinweisIFK" id="HinweisIFK1" value="Ja">
+                    <label class="form-check-label me-5" for="HinweisIFK1">
+                        Ja
+                    </label>
+                    <input class="form-check-input" type="radio" name="HinweisIFK" id="HinweisIFK2" value="">
+                    <label class="form-check-label" for="HinweisIFK2">
+                        Nein, da nicht erforderlich
+                    </label>
                 </div>
             </div>
         </div>
@@ -2416,8 +2422,16 @@
         </label>
         <input type="date" id="start" name="trip-start" value="" min="2023-04-01" max="2035-12-31">
 
-        
-
+        <div></div>
+        <button class="btn btn btn-outline-success bootstrap-select text-dark mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBem" aria-expanded="false" aria-controls="collapseExample">
+            Bemerkung (optional):
+        </button>
+        <div class="showOnPrint">Bemerkung (optional):</div>
+        <div class="collapse" id="collapseBem">
+            <div class="mb-3">
+                <textarea class="form-control border-dark" id="" rows="3"></textarea>
+            </div>
+        </div>
     </div>
 
     <button type="button" class="btn btn-success mb-5" id="Drucken">In eAkte drucken</button>
