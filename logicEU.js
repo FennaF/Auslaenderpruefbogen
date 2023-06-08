@@ -149,7 +149,7 @@ PrüfEU33Radios.forEach(function(radio){
             ErgebnisEU2.classList.remove("d-none")
             Ueberschrift.classList.remove("d-none")
             ErgebnisEU33.classList.add("d-none")
-            Wiedervolage.classList.add("d-none")
+            Wiedervolage.classList.remove("d-none")
             window.scrollBy(0, 500) 
         }
     })
