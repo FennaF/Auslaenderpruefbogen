@@ -47,6 +47,7 @@
 <!--Kundendaten-->
     <div class="container">
         <div class="row mt-3 mb-2">
+            <p class="my-0 fw-bold ps-3">(1)</p>
             <div class="col ps-3">
                 <input type="text" class="form-control bootstrap-select print-only border-bottom mb-0" id="KdName" placeholder="">
                 <label for="KdName" class="col-auto pe-0 fst-italic">Name</label>
@@ -267,6 +268,18 @@
                         </label>
                     </div>
                     <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="x1">
+                        <label class="form-check-label" for="x1">
+                            § 23 Abs. 1 <span class="fst-italic orangeColor">(ohne Zusatz „wegen Krieges im Heimatland“; vgl. FW BA zu § 7 SGB II, Rz. 7.21 (4))</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="x2">
+                        <label class="form-check-label" for="x2">
+                            § 23 Abs. 2
+                        </label>
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="radio" name="keinAusschluss" id="3">
                         <label class="form-check-label" for="3">
                             § 23 Abs. 3
@@ -373,12 +386,6 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="keinAusschluss" id="20">
-                        <label class="form-check-label" for="20">
-                        § 25b Abs. 1
-                        </label>
-                    </div>
-                    <div class="form-check">
                         <input class="form-check-input" type="radio" name="keinAusschluss" id="21">
                         <label class="form-check-label" for="21">
                         § 25b Abs. 2
@@ -421,8 +428,8 @@
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="keinAusschluss" id="27">
-                        <label class="form-check-label" for="27">
+                        <input class="form-check-input" type="radio" name="keinAusschluss" id="29">
+                        <label class="form-check-label" for="29">
                         § 26 Abs. 4
                         </label>
                     </div>
@@ -1041,7 +1048,7 @@
                     <div class="row py-3 border border-dark">
                         <div class="form-check">
                             <label class="form-check-label" for="">
-                                Aufenthaltstitel nach Kapitel 2 Abschnitt 6 AufenthG (jeder Titel nach § 27 bis § 36a AufenthG) und
+                                Aufenthaltstitel nach Kapitel 2 Abschnitt 6 AufenthG <span class="fst-italic orangeColor">(jeder Titel nach § 27 bis § 36a AufenthG)</span> und
                                 Bezugsperson (i. d. R. Ehepartner/Eltern(-teil), Kind) besitzt beliebige Niederlassungserlaubnis
                                 nach AufenthG, aber keine nach § 26 AufenthG? <span class="fst-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Rzn. 7.48, 7.48a,
                                 Anlage 4)</span>
@@ -1124,7 +1131,7 @@
                             <label class="form-check-label me-5" for="PrüfverlaufDritt221JaNein71b">
                                 Ja
                             </label>
-                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt228JaNein7b" id="PrüfverlaufDritt221JaNein72b" value="">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNein7b" id="PrüfverlaufDritt221JaNein72b" value="">
                             <label class="form-check-label" for="PrüfverlaufDritt221JaNein72b">
                                 Nein
                             </label>
@@ -1179,6 +1186,23 @@
                             </label>
                             <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNein10b" id="PrüfverlaufDritt221JaNein102b" value="">
                             <label class="form-check-label" for="PrüfverlaufDritt221JaNein102b">
+                                Nein
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row py-3 border border-dark">
+                        <div class="form-check">
+                            <label class="form-check-label" for="">
+                                 Aufenthaltstitel nach § 4 Abs. 5 AufenthG (Aufenthaltsrecht gem. Assoziationsabkommen EWG/Türkei), Titel ausgestellt bis einschl. 29.02.2020?  <span class="fst-italic orangeColor">(vgl. FW BA zu § 7 SGB II, Anlage 4)</span>
+                            </label>
+                        </div>
+                        <div class="ps-4">
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNeinx11b" id="PrüfverlaufDritt221JaNeinx111b" value="Ja">
+                            <label class="form-check-label me-5" for="PrüfverlaufDritt221JaNeinx111b">
+                                Ja
+                            </label>
+                            <input class="form-check-input" type="radio" name="PrüfverlaufDritt221JaNeinx11b" id="PrüfverlaufDritt221JaNeinx112b" value="">
+                            <label class="form-check-label" for="PrüfverlaufDritt221JaNeinx112b">
                                 Nein
                             </label>
                         </div>
@@ -1652,8 +1676,8 @@
                         <label class="form-check-label" for="">
                             Minderjähriges Kind lediglich mit Fiktionsbescheinigung nach § 81 Abs. 3 S. 1 AufenthG; ein
                             Elternteil ist leistungsberechtigt nach AsylbLG, das andere Elternteil nach SGB II, Eltern üben
-                            Personensorge gemeinsam aus? – (vgl. § 1 Abs. 1 Nr. 6 i. V. m. Abs. 2 AsylbLG; Hinweis: FB nach
-                            § 81 Abs. 3 S. 1 AufenthG ist kein Titel im Sinne von § 4 Abs. 1 AufenthG) <span class="fst-italic orangeColor">(vgl. FW BA zu § 7 SGB
+                            Personensorge gemeinsam aus? <span class="fst-italic orangeColor">(vgl. § 1 Abs. 1 Nr. 6 i. V. m. Abs. 2 AsylbLG; Hinweis: FB nach
+                            § 81 Abs. 3 S. 1 AufenthG ist kein Titel im Sinne von § 4 Abs. 1 AufenthG) (vgl. FW BA zu § 7 SGB
                             II, Rz. 7.40, Anlage 4)</span>
                         </label>
                     </div>
@@ -1850,7 +1874,7 @@
             <div class="container ps-0 d-none mb-5" id="ErgebnisDritt221">
                 <div class="row mb-2 ms-0 fw-bold">
                     Es liegt einer der ausländerspezifischen SGB II-Ausschlussgründe vor, und zwar nach:
-                    § 7 Abs. 1 S. 2 Nr. 1 <span class="fst-italic orangeColor">(Aufenthalt während der ersten drei Monate nach Einreise/Geburt)
+                    § 7 Abs. 1 S. 2 Nr. 1 (Aufenthalt während der ersten drei Monate nach Einreise/Geburt) <span class="fst-italic orangeColor">
                     (Mitteilung an Ausländerbehörde gem. § 87 Abs. 2 S. 1 Nr. 2a bzw. S. 3 AufenthG prüfen; vgl. FW BA zu §
                     7 SGB II, Rzn. 7.42, 7.62)</span>
                 </div>
